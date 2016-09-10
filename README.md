@@ -32,6 +32,8 @@ and add the meta tag at the top if you want to use it for **BetterDiscord**, e.g
 `//META{"name":"Solarized","description":"solarized theme for discord","author":"ZerataX","version":"0.1"}//`
 
 ##Screenshots
+###Dark appearance
 ![dark appearance](https://my.mixtape.moe/buwper.png)
+###Light appearance
 ![light appearance](https://my.mixtape.moe/dnhjdz.png)
 
