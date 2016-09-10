@@ -1,0 +1,418 @@
+//colors
+$yellow:				#b58900
+$orange:				#cb4b16
+$red:						#dc322f
+$magenta:				#d33682
+$violet:				#6c71c4
+$blue:					#268bd2
+$cyan:					#2aa198
+$green: 				#859900
+
+$light_base03:	#fdf6e3
+$light_base02:	#eee8d5
+$light_base01:	#93a1a1
+$light_base00:	#839496
+$light_base0:		#657b83
+$light_base1:		#586e75
+$light_base2:		#073642
+$light_base3:		#002b36
+
+$dark_base03:		$light_base3
+$dark_base02:		$light_base2
+$dark_base01:		$light_base1
+$dark_base00:		$light_base0
+$dark_base0:		$light_base00
+$dark_base1:		$light_base01
+$dark_base2:		$light_base02
+$dark_base3:		$light_base03
+
+//fonts
+$font_0: "Source Code Pro for Powerline"
+
+//other
+$radius: 10px
+$shadow: 0px 0px 15px 0px rgba(0,0,0,0.4)
+$themes: (dark, $dark_base03, $dark_base02, $dark_base01, $dark_base00, $dark_base0, $dark_base1, $dark_base2, $dark_base3, $light_base03, $light_base02, $light_base01, $light_base00, $light_base1, $light_base2, $light_base3),(light, $light_base03, $light_base02, $light_base01, $light_base00, $light_base1, $light_base2, $light_base3, $dark_base03, $dark_base02, $dark_base01, $dark_base00, $dark_base0, $dark_base1, $dark_base2, $dark_base3)
+
+//mixins
+
+//start
+body
+	font-family: $font_0 !important
+	font-weight: light
+::selection
+	color: $light_base03
+	background: $blue
+.message-group
+	.comment .markup pre
+		border: 0px solid black !important
+.avatar-large, .avatar-popout, .avatar-hint, .avatar-small, .avatar-xxlarge
+	border-radius: $radius !important
+.avatar-uploader-inner
+	@extend .avatar-large
+	border-color: $light_base02 !important
+video, code, .image
+	@extend .avatar-large
+	-webkit-box-shadow: $shadow
+.hljs-attribute
+	color: $orange !important
+.hljs-important
+	color: $red !important
+.hljs-built_in
+	color: $blue !important
+.hljs-number, .hljs-value
+	color: $blue !important
+.hljs-comment
+	color: $dark_base1 !important
+.hljs-keyword
+	color: $green !important
+.highlight,
+.scroller.messages a, .settings-right a, .settings-new-password, .link-button, .region-select-modal-header, .form-header header
+	color: $blue !important
+.changelog-added
+	background-color: $green !important
+.changelog-fixed, .btn-primary, .install-button, .theme-install-button, .plugin-install-button
+	background-color: $blue !important
+	color: $light_base1
+.changelog-in-progress
+	background-color: $orange !important
+	color: $light_base1
+.danger
+	background-color: $red !important
+	color: $light_base02 !important
+.btn-warning, .update-button, .theme-update-button, .plugin-update-button
+	@extend body
+	background-color: $red !important
+.view-source-button
+	@extend body
+	background-color: $green !important
+.btn-ghost
+	background-color: $light_base02 !important
+	color: $light_base00 !important
+	border-color: $light_base00 !important
+.btn-confirm:hover
+	background-color: $red !important
+	color: $light_base01
+.btn-help
+	color: $light_base01
+	background: $light_base1
+.permission-checkmark
+	-webkit-filter: sepia(90%) hue-rotate(80deg)
+.mfa-active
+	color: $green !important
+	img
+		-webkit-filter: hue-rotate(300deg)
+.protip .label
+	color: $cyan
+.status-idle
+	background-color: $orange
+.status-online
+	background-color: $green
+.status-offline
+	background-color: $light_base00
+.tooltips
+	background-color: $light_base03
+	border-color: $light_base02
+	color: $light_base01
+	&::after
+		border-color: $light_base03 transparent transparent transparent !important
+#settings-roles
+	.roles li:hover, .roles li.selected,
+		background: linear-gradient(to right,$light_base02,$light_base03)
+		&::before
+			background-color: $blue
+.checkbox .disabled
+	span
+		color: $light_base1
+.checkbox
+	span
+		color: $light_base00
+.ebr-theme-item, .ebr-plugin-item, .ebr-theme-item-info, .ebr-plugin-item-info
+	background-color: $light_base02 !important
+	color: $light_base00 !important
+	border-color: $light_base00
+#theme-search, #plugin-search
+	@extend  .ebr-theme-item
+	&:focus
+		border-color: $orange
+.themes-header, .plugins-header
+	color: $light_base00 !important
+.modal
+	input
+		&::selection
+			background: $blue
+			color: $light_base01
+	span
+		color: $light_base00
+	.radio-theme
+		input
+			background-color: $light_base03
+		input[type=radio]:checked~label
+			border-color: $blue
+	.help-text
+		color: $light_base01
+	.copy
+		background: $light_base02
+		color: $light_base00
+	.swatch .custom
+		background-color: $light_base02
+		&::after
+			background: $light_base03
+	.btn-default
+		background-color: $light_base03 !important
+		color: $light_base00 !important
+		&:hover
+			border-bottom-color: $light_base1 !important
+	.header
+		color: $blue
+	.scroller-wrap
+		::-webkit-scrollbar-thumb
+			background-color: $light_base03
+			border-color: $light_base01
+		::-webkit-scrollbar-track-piece
+			background-color: $light_base03
+			border-left-color: $light_base02
+			border-right-color: $light_base02
+			border-bottom-color: $light_base03
+			border-top-color: $light_base03
+			border-radius: $radius px !important
+	.Select-control,
+		background-color: $light_base02
+		border-color: $light_base00
+		color: $light_base00
+		&:hover
+			border-color: $light_base01
+	.Select-menu-outer
+		@extend .Select-control
+		background-color: $light_base02
+	.is-open > .Select-control
+		background-color: $light_base02
+	.search-bar
+		background: $light_base02
+		.search-bar-inner
+			background-color: rgba($light_base02, .7)
+			.search-bar-clear
+				background: $blue
+				&::before
+					background: rgba($light_base02, .7)
+				&::after
+					background: $blue
+	.markdown-modal, .region-select-modal, .guild-settings-modal-members
+		-webkit-box-shadow: $shadow
+		background-color: $light_base03
+		.settings-panel-header
+			border-bottom-color: $light_base00 !important
+		.member
+			border-top-color: $light_base00 !important
+			.member-buttons
+				.btn
+					background-color: $light_base03 !important
+					color: $light_base00 !important
+					border-color: $light_base00 !important
+					&:hover
+						background-color: $light_base02 !important
+				.btn-danger
+					border-color: $red !important
+					color: $red !important
+					&:hover
+						color: $light_base00
+						background-color: $red !important
+		.markdown-modal-header
+			color: $light_base01
+			border-bottom: 1px solid $light_base00
+		.scroller
+			color: $light_base01
+		.markdown-modal-footer
+			background-color: $light_base03
+		.region-select-modal-option
+			background-color: $light_base02
+			border-color: $light_base00
+			color: $light_base00
+			&:hover
+				border-color: $blue
+			.region-select-name
+				color: $light_base01
+		.region-select-modal-footer
+			color: $light_base00
+	.settings-right, .settings-inner, .form-header, .form-inner
+		input
+			@extend body
+		.authed-app
+			background-color: $dark_base03
+			color: $dark_base00
+		.header
+			color: $dark_base00
+		.body
+			color: $dark_base2
+		.control-group
+			.clipboard-input-inner
+				border-color: $light_base01
+				&::before
+					background: linear-gradient(to right,rgba(255,255,255,0),$light_base03)
+			span
+				color: $light_base00
+			input
+				background-color: $light_base02
+				color: $light_base2 !important
+				&:focus
+					border-bottom-color: $blue
+
+			.slider-bar
+				background: $light_base00
+				.slider-bar-fill
+					background: $blue
+			.slider-handle
+				background-color: $light_base02
+				border-color: $blue
+				span
+					background-color: $light_base03
+					border-color: $light_base02
+					color: $light_base01
+					&::after
+						border-color: $light_base03 transparent transparent transparent !important
+		.tab-bar-item
+			color: $light_base00 !important
+			&:hover
+				border-bottom-color: $light_base02 !important
+		.selected
+			border-bottom-color: $blue !important
+			color: $blue !important
+			&:hover
+				border-bottom-color: $blue !important
+		.settings-inner, .settings-actions
+			background-color: $light_base03
+	.settings-header
+		@extend body
+		background-color: rgba($dark_base03, .7)
+		color: $dark_base3
+		.tab-bar-header
+			color: $dark_base2 !important
+		.tab-bar-item
+			color: $dark_base00
+			&:hover, &:focus
+				color: $dark_base2
+			&::before
+				border-left-color: $blue
+		.change-log-button-container a
+			color: $orange
+	.form-actions
+		background-color: $light_base02
+		.btn-default button
+			background-color: $light_base02 !important
+			color: $light_base01 !important
+			border-color: transparent
+			&:hover
+				border-bottom-color: $light_base1 !important
+	.form-inner, .form-header, .scroller
+		background-color: $light_base03 !important
+@each $theme, $X_base03, $X_base02, $X_base01, $X_base00, $X_base0, $X_base1, $X_base2, $X_base3, $Y_base03, $Y_base02, $Y_base01, $Y_base00, $Y_base0, $Y_base1, $Y_base2, $Y_base3 in $themes
+	.theme-#{$theme}
+		.channel-textarea-inner
+			@extend body
+			background-color: $X_base02
+			border-color: $X_base01
+			textarea
+				@extend .channel-textarea-inner
+				color: $X_base1 !important
+		code
+			color: $X_base00
+			background-color: $Y_base03 !important
+		.flex-spacer, .typing
+			background-color: $X_base02 !important
+		.title-wrap
+			border-bottom-color: $X_base02 !important
+			@extend .flex-spacer
+			.channel-name
+				color: $X_base2 !important
+				&::before
+					color: $X_base01 !important
+			.topic topic-expandable
+				color: $X_base02 !important
+				&::before
+					color: $X_base01 !important
+		.channel-members
+			.member:hover, .member:focus, .member.popout-open
+				background: linear-gradient(to right, $X_base01 85%, $X_base02) !important
+				.status
+					border-color: $X_base02
+		.chat
+			.new-messages-bar
+				background-color: rgba($cyan, .7)
+				color: $X_base3
+				border-radius: $radius
+			.jump-to-present-bar
+				background-color: $X_base00
+				border-radius: radius
+				color: $X_base2
+			.divider
+				> span
+					//border-radius: $radius !important
+					color: $X_base0 !important
+					//background: $X_base01 !important
+				> div
+					//background: $X_base01 !important
+			.divider-red
+				> span
+					//border-radius: $radius !important
+					color: $red !important
+					//background: $red !important
+				> div
+					//background: $red !important
+		.scroller.messages
+			background-color: $X_base03 !important
+			.user-name
+				color: $X_base3
+		.channel-members-wrap
+			h2
+				color: $X_base2 !important
+			.scroller
+				background-color: $X_base02 !important
+				.member-activity
+					color: $X_base2 !important
+		.message-group .comment .markup
+			color: $X_base0 !important
+		.messages-wrapper .scroller-wrap,
+		.friends-table .scroller-wrap
+			::-webkit-scrollbar-thumb
+				background-color: $X_base03
+				border-color: $X_base01
+			::-webkit-scrollbar-track-piece
+				background-color: $X_base03
+				border-left-color: $X_base02
+				border-right-color: $X_base02
+				border-bottom-color: $X_base03
+				border-top-color: $X_base03
+				border-radius: $radius !important
+		.user-popout
+			@extend body
+			.header
+				.username, .nickname, strong
+					color: $X_base3
+				.discriminator
+					color: $X_base2
+				.activity
+					color: $X_base01
+				background: rgba( $X_base02, .7 )
+				//-webkit-filter: hue-rotate(270deg)
+				.avatar-popout
+					//-webkit-filter: hue-rotate(30deg)
+					border: none
+			.body, .footer
+				background-color: $Y_base03
+				color: $Y_base00
+				textarea
+					color: $Y_base00
+					&:focus
+						background-color: $Y_base02
+						color: $Y_base2
+				input, .member-role-add button
+					color: $Y_base00
+					background-color: $Y_base02
+					border-color: $Y_base01
+				.member-role-add
+					@extend input
+					border-color: $Y_base01
+				.icon
+					color: $Y_base02
+				.footer
+					border-top-color: $Y_base01
