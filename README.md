@@ -8,9 +8,9 @@ You have to options to use this theme:
 
 **2.**  Install something like **Stylish**
 
-    -[Chrome](https://chrome.google.com/webstore/detail/stylish/fjnbnpbmkenffdnngjfgmeleoegfcffe?hl=de)
-    
-    -[Firefox](https://addons.mozilla.org/de/firefox/addon/stylish/)
+**[Chrome](https://chrome.google.com/webstore/detail/stylish/fjnbnpbmkenffdnngjfgmeleoegfcffe?hl=de)**
+
+**[Firefox](https://addons.mozilla.org/de/firefox/addon/stylish/)**
     
 ##Config
 Use the [.sass file](https://raw.githubusercontent.com/ZerataX/discord-solarized-theme/master/solarized.theme.sass) to quickly change the colorscheme.
