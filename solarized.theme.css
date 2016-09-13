@@ -1,40 +1,47 @@
-body, .btn-warning, .update-button, .theme-update-button, .plugin-update-button, .view-source-button, .modal .settings-right input, .modal .settings-right .theme-dark .user-popout .body .member-role-add, .theme-dark .user-popout .body .modal .settings-right .member-role-add, .modal .settings-right .theme-dark .user-popout .footer .member-role-add, .theme-dark .user-popout .footer .modal .settings-right .member-role-add, .modal .settings-right .theme-light .user-popout .body .member-role-add, .theme-light .user-popout .body .modal .settings-right .member-role-add, .modal .settings-right .theme-light .user-popout .footer .member-role-add, .theme-light .user-popout .footer .modal .settings-right .member-role-add, .modal .settings-inner input, .modal .settings-inner .theme-dark .user-popout .body .member-role-add, .theme-dark .user-popout .body .modal .settings-inner .member-role-add, .modal .settings-inner .theme-dark .user-popout .footer .member-role-add, .theme-dark .user-popout .footer .modal .settings-inner .member-role-add, .modal .settings-inner .theme-light .user-popout .body .member-role-add, .theme-light .user-popout .body .modal .settings-inner .member-role-add, .modal .settings-inner .theme-light .user-popout .footer .member-role-add, .theme-light .user-popout .footer .modal .settings-inner .member-role-add, .modal .form-header input, .modal .form-header .theme-dark .user-popout .body .member-role-add, .theme-dark .user-popout .body .modal .form-header .member-role-add, .modal .form-header .theme-dark .user-popout .footer .member-role-add, .theme-dark .user-popout .footer .modal .form-header .member-role-add, .modal .form-header .theme-light .user-popout .body .member-role-add, .theme-light .user-popout .body .modal .form-header .member-role-add, .modal .form-header .theme-light .user-popout .footer .member-role-add, .theme-light .user-popout .footer .modal .form-header .member-role-add, .modal .form-inner input, .modal .form-inner .theme-dark .user-popout .body .member-role-add, .theme-dark .user-popout .body .modal .form-inner .member-role-add, .modal .form-inner .theme-dark .user-popout .footer .member-role-add, .theme-dark .user-popout .footer .modal .form-inner .member-role-add, .modal .form-inner .theme-light .user-popout .body .member-role-add, .theme-light .user-popout .body .modal .form-inner .member-role-add, .modal .form-inner .theme-light .user-popout .footer .member-role-add, .theme-light .user-popout .footer .modal .form-inner .member-role-add, .modal .settings-header, .theme-dark .channel-textarea-inner, .theme-dark .channel-textarea-inner textarea, .theme-dark .user-popout, .theme-light .channel-textarea-inner, .theme-light .channel-textarea-inner textarea, .theme-light .user-popout {
-  font-family: "Source Code Pro for Powerline" !important;
+body, .changelog-fixed, .btn-primary[type=button], .install-button, .theme-install-button, .plugin-install-button, .bot-tag, .modal #instant-invite-modal .copy, .btn-warning, .update-button, .theme-update-button, .plugin-update-button, .btn-delete, .account-warning, .btn-primary[type=submit], .view-source-button, button .green, .modal .settings-right input, .modal .settings-right .theme-dark .user-popout .body .member-role-add, .theme-dark .user-popout .body .modal .settings-right .member-role-add, .modal .settings-right .theme-dark .user-popout .footer .member-role-add, .theme-dark .user-popout .footer .modal .settings-right .member-role-add, .modal .settings-right .theme-light .user-popout .body .member-role-add, .theme-light .user-popout .body .modal .settings-right .member-role-add, .modal .settings-right .theme-light .user-popout .footer .member-role-add, .theme-light .user-popout .footer .modal .settings-right .member-role-add, .modal .settings-inner input, .modal .settings-inner .theme-dark .user-popout .body .member-role-add, .theme-dark .user-popout .body .modal .settings-inner .member-role-add, .modal .settings-inner .theme-dark .user-popout .footer .member-role-add, .theme-dark .user-popout .footer .modal .settings-inner .member-role-add, .modal .settings-inner .theme-light .user-popout .body .member-role-add, .theme-light .user-popout .body .modal .settings-inner .member-role-add, .modal .settings-inner .theme-light .user-popout .footer .member-role-add, .theme-light .user-popout .footer .modal .settings-inner .member-role-add, .modal .form-header input, .modal .form-header .theme-dark .user-popout .body .member-role-add, .theme-dark .user-popout .body .modal .form-header .member-role-add, .modal .form-header .theme-dark .user-popout .footer .member-role-add, .theme-dark .user-popout .footer .modal .form-header .member-role-add, .modal .form-header .theme-light .user-popout .body .member-role-add, .theme-light .user-popout .body .modal .form-header .member-role-add, .modal .form-header .theme-light .user-popout .footer .member-role-add, .theme-light .user-popout .footer .modal .form-header .member-role-add, .modal .form-inner input, .modal .form-inner .theme-dark .user-popout .body .member-role-add, .theme-dark .user-popout .body .modal .form-inner .member-role-add, .modal .form-inner .theme-dark .user-popout .footer .member-role-add, .theme-dark .user-popout .footer .modal .form-inner .member-role-add, .modal .form-inner .theme-light .user-popout .body .member-role-add, .theme-light .user-popout .body .modal .form-inner .member-role-add, .modal .form-inner .theme-light .user-popout .footer .member-role-add, .theme-light .user-popout .footer .modal .form-inner .member-role-add, .modal .settings-header, .theme-dark .channel-textarea-inner, .theme-dark .channel-textarea-inner textarea, .theme-dark .user-popout, .theme-light .channel-textarea-inner, .theme-light .channel-textarea-inner textarea, .theme-light .user-popout {
+  color: pink !important;
+  font-family: "Source Code Pro for Powerline";
   font-weight: light; }
 
 ::selection {
-  color: #fdf6e3;
-  background: #268bd2; }
+  color: #fdf6e3 !important;
+  background: #268bd2 !important; }
 
 .message-group .comment .markup pre {
-  border: 0px solid black !important; }
+  border: 0px solid black; }
 
 .avatar-large, .avatar-uploader-inner, video, code, .image, .avatar-popout, .avatar-hint, .avatar-small, .avatar-xxlarge {
+  -webkit-border-radius: 10px !important;
+  -moz-border-radius: 10px !important;
+  -ms-border-radius: 10px !important;
   border-radius: 10px !important; }
 
 .avatar-uploader-inner {
-  border-color: #eee8d5 !important; }
+  border-color: #eee8d5; }
 
 video, code, .image {
-  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.4); }
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.4);
+  -ms-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.4); }
 
 .hljs-attribute {
-  color: #cb4b16 !important; }
+  color: #cb4b16; }
 
 .hljs-important {
-  color: #dc322f !important; }
+  color: #dc322f; }
 
 .hljs-built_in {
-  color: #268bd2 !important; }
+  color: #268bd2; }
 
 .hljs-number, .hljs-value {
-  color: #268bd2 !important; }
+  color: #268bd2; }
 
 .hljs-comment {
-  color: #93a1a1 !important; }
+  color: #93a1a1; }
 
 .hljs-keyword {
-  color: #859900 !important; }
+  color: #859900; }
 
 .highlight,
 .scroller.messages a, .settings-right a, .settings-new-password, .link-button, .region-select-modal-header, .form-header header {
@@ -43,36 +50,38 @@ video, code, .image {
 .changelog-added {
   background-color: #859900 !important; }
 
-.changelog-fixed, .btn-primary, .install-button, .theme-install-button, .plugin-install-button {
+.changelog-fixed, .btn-primary[type=button], .install-button, .theme-install-button, .plugin-install-button, .bot-tag, .modal #instant-invite-modal .copy {
   background-color: #268bd2 !important;
-  color: #586e75; }
+  color: #eee8d5 !important; }
 
 .changelog-in-progress {
   background-color: #cb4b16 !important;
-  color: #586e75; }
+  color: #eee8d5 !important; }
 
 .danger {
   background-color: #dc322f !important;
   color: #eee8d5 !important; }
 
-.btn-warning, .update-button, .theme-update-button, .plugin-update-button {
-  background-color: #dc322f !important; }
+.btn-warning, .update-button, .theme-update-button, .plugin-update-button, .btn-delete, .account-warning, .btn-primary[type=submit] {
+  background-color: #dc322f !important;
+  color: #eee8d5 !important; }
 
-.view-source-button {
-  background-color: #859900 !important; }
+.view-source-button, button .green {
+  background-color: #859900 !important;
+  color: #eee8d5 !important; }
 
 .btn-ghost {
   background-color: #eee8d5 !important;
   color: #839496 !important;
   border-color: #839496 !important; }
 
-.btn-confirm:hover {
+.btn-confirm:hover, .btn-confirm:hover .btn {
   background-color: #dc322f !important;
-  color: #93a1a1; }
+  color: #93a1a1 !important; }
 
 .btn-help {
-  color: #93a1a1;
-  background: #586e75; }
+  color: #93a1a1 !important;
+  background: #586e75 !important; }
 
 .permission-checkmark {
   -webkit-filter: sepia(90%) hue-rotate(80deg); }
@@ -82,8 +91,11 @@ video, code, .image {
   .mfa-active img {
     -webkit-filter: hue-rotate(300deg); }
 
+.icon-instant-invite {
+  -webkit-filter: hue-rotate(300deg); }
+
 .protip .label {
-  color: #2aa198; }
+  color: #2aa198 !important; }
 
 .status-idle {
   background-color: #cb4b16; }
@@ -94,23 +106,16 @@ video, code, .image {
 .status-offline {
   background-color: #839496; }
 
-.tooltips {
-  background-color: #fdf6e3;
-  border-color: #eee8d5;
-  color: #93a1a1; }
-  .tooltips::after {
-    border-color: #fdf6e3 transparent transparent transparent !important; }
-
 #settings-roles .roles li:hover, #settings-roles .roles li.selected {
   background: linear-gradient(to right, #eee8d5, #fdf6e3); }
   #settings-roles .roles li:hover::before, #settings-roles .roles li.selected::before {
     background-color: #268bd2; }
 
 .checkbox .disabled span {
-  color: #586e75; }
+  color: #586e75 !important; }
 
 .checkbox span {
-  color: #839496; }
+  color: #839496 !important; }
 
 .ebr-theme-item, #theme-search, #plugin-search, .ebr-plugin-item, .ebr-theme-item-info, .ebr-plugin-item-info {
   background-color: #eee8d5 !important;
@@ -125,18 +130,43 @@ video, code, .image {
 
 .modal input::selection, .modal .theme-dark .user-popout .body .member-role-add::selection, .theme-dark .user-popout .body .modal .member-role-add::selection, .modal .theme-dark .user-popout .footer .member-role-add::selection, .theme-dark .user-popout .footer .modal .member-role-add::selection, .modal .theme-light .user-popout .body .member-role-add::selection, .theme-light .user-popout .body .modal .member-role-add::selection, .modal .theme-light .user-popout .footer .member-role-add::selection, .theme-light .user-popout .footer .modal .member-role-add::selection {
   background: #268bd2;
-  color: #93a1a1; }
+  color: #93a1a1 !important; }
+.modal span .link, .modal label .help-translate {
+  color: #859900 !important; }
+  .modal span .link:hover, .modal label .help-translate:hover {
+    color: #cb4b16 !important; }
 .modal span {
   color: #839496; }
+.modal h3, .modal h2, .modal h1, .modal .settings-wrapper, .modal .user-settings-modal-accounts-list-description-inner, .modal .checkbox, .modal .role-name {
+  color: #839496 !important; }
+.modal .clipboard-input-inner button:first-of-type:before {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #eee8d5); }
+.modal .disabled-for-everyone:hover {
+  color: #dc322f !important; }
+.modal .CodeMirror {
+  color: #657b83;
+  background-color: #002b36 !important; }
+  .modal .CodeMirror .linenumber {
+    color: #657b83 !important;
+    background-color: #073642; }
+  .modal .CodeMirror .cm-tag, .modal .CodeMirror .cm-qualifier, .modal .CodeMirror .cm-property, .modal .CodeMirror .cm-string, .modal .CodeMirror .cm-variable-3 {
+    color: #586e75 !important; }
+  .modal .CodeMirror .cm-keyword, .modal .CodeMirror .cm-atom, .modal .CodeMirror .cm-number {
+    color: #2aa198 !important 2; }
+.modal .connection-header, .modal .connection-name, .modal .connection-divider, .modal .checkbox {
+  color: #eee8d5 !important; }
+.modal .now-playing .no-detection {
+  background: #839496;
+  color: #eee8d5 !important; }
 .modal .radio-theme input, .modal .radio-theme .theme-dark .user-popout .body .member-role-add, .theme-dark .user-popout .body .modal .radio-theme .member-role-add, .modal .radio-theme .theme-dark .user-popout .footer .member-role-add, .theme-dark .user-popout .footer .modal .radio-theme .member-role-add, .modal .radio-theme .theme-light .user-popout .body .member-role-add, .theme-light .user-popout .body .modal .radio-theme .member-role-add, .modal .radio-theme .theme-light .user-popout .footer .member-role-add, .theme-light .user-popout .footer .modal .radio-theme .member-role-add {
   background-color: #fdf6e3; }
 .modal .radio-theme input[type=radio]:checked ~ label, .modal .radio-theme .theme-dark .user-popout .body [type=radio].member-role-add:checked ~ label, .theme-dark .user-popout .body .modal .radio-theme [type=radio].member-role-add:checked ~ label, .modal .radio-theme .theme-dark .user-popout .footer [type=radio].member-role-add:checked ~ label, .theme-dark .user-popout .footer .modal .radio-theme [type=radio].member-role-add:checked ~ label, .modal .radio-theme .theme-light .user-popout .body [type=radio].member-role-add:checked ~ label, .theme-light .user-popout .body .modal .radio-theme [type=radio].member-role-add:checked ~ label, .modal .radio-theme .theme-light .user-popout .footer [type=radio].member-role-add:checked ~ label, .theme-light .user-popout .footer .modal .radio-theme [type=radio].member-role-add:checked ~ label {
   border-color: #268bd2; }
 .modal .help-text {
-  color: #93a1a1; }
+  color: #93a1a1 !important; }
 .modal .copy {
   background: #eee8d5;
-  color: #839496; }
+  color: #839496 !important; }
 .modal .swatch .custom {
   background-color: #eee8d5; }
   .modal .swatch .custom::after {
@@ -157,11 +187,14 @@ video, code, .image {
   border-right-color: #eee8d5;
   border-bottom-color: #fdf6e3;
   border-top-color: #fdf6e3;
-  border-radius: 10px px !important; }
+  -webkit-border-radius: 10px !important;
+  -moz-border-radius: 10px !important;
+  -ms-border-radius: 10px !important;
+  border-radius: 10px !important; }
 .modal .Select-control, .modal .Select-menu-outer {
   background-color: #eee8d5;
   border-color: #839496;
-  color: #839496; }
+  color: #839496 !important; }
   .modal .Select-control:hover, .modal .Select-menu-outer:hover {
     border-color: #93a1a1; }
 .modal .Select-menu-outer {
@@ -172,31 +205,37 @@ video, code, .image {
   background: #eee8d5; }
   .modal .search-bar .search-bar-inner {
     background-color: rgba(238, 232, 213, 0.7); }
+    .modal .search-bar .search-bar-inner input, .modal .search-bar .search-bar-inner .theme-dark .user-popout .body .member-role-add, .theme-dark .user-popout .body .modal .search-bar .search-bar-inner .member-role-add, .modal .search-bar .search-bar-inner .theme-dark .user-popout .footer .member-role-add, .theme-dark .user-popout .footer .modal .search-bar .search-bar-inner .member-role-add, .modal .search-bar .search-bar-inner .theme-light .user-popout .body .member-role-add, .theme-light .user-popout .body .modal .search-bar .search-bar-inner .member-role-add, .modal .search-bar .search-bar-inner .theme-light .user-popout .footer .member-role-add, .theme-light .user-popout .footer .modal .search-bar .search-bar-inner .member-role-add {
+      color: #839496 !important; }
     .modal .search-bar .search-bar-inner .search-bar-clear {
       background: #268bd2; }
-      .modal .search-bar .search-bar-inner .search-bar-clear::before {
-        background: rgba(238, 232, 213, 0.7); }
-      .modal .search-bar .search-bar-inner .search-bar-clear::after {
-        background: #268bd2; }
+      .modal .search-bar .search-bar-inner .search-bar-clear::before, .modal .search-bar .search-bar-inner .search-bar-clear::after {
+        background: #93a1a1; }
+.modal .markdown-modal .selectable {
+  color: #839496 !important; }
+  .modal .markdown-modal .selectable .markdown-modal-header {
+    border-bottom-color: #839496; }
 .modal .markdown-modal, .modal .region-select-modal, .modal .guild-settings-modal-members {
-  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px, 0px, 15px, 0px, rgba(0, 0, 0, 0.4);
   background-color: #fdf6e3; }
   .modal .markdown-modal .settings-panel-header, .modal .region-select-modal .settings-panel-header, .modal .guild-settings-modal-members .settings-panel-header {
-    border-bottom-color: #839496 !important; }
+    border-bottom-color: #839496; }
   .modal .markdown-modal .member, .modal .region-select-modal .member, .modal .guild-settings-modal-members .member {
-    border-top-color: #839496 !important; }
+    border-top-color: #839496; }
     .modal .markdown-modal .member .member-buttons .btn, .modal .region-select-modal .member .member-buttons .btn, .modal .guild-settings-modal-members .member .member-buttons .btn {
-      background-color: #fdf6e3 !important;
+      background-color: #fdf6e3;
       color: #839496 !important;
-      border-color: #839496 !important; }
+      border-color: #839496; }
       .modal .markdown-modal .member .member-buttons .btn:hover, .modal .region-select-modal .member .member-buttons .btn:hover, .modal .guild-settings-modal-members .member .member-buttons .btn:hover {
-        background-color: #eee8d5 !important; }
+        background-color: #839496;
+        color: #eee8d5 !important; }
     .modal .markdown-modal .member .member-buttons .btn-danger, .modal .region-select-modal .member .member-buttons .btn-danger, .modal .guild-settings-modal-members .member .member-buttons .btn-danger {
-      border-color: #dc322f !important;
+      border-color: #dc322f;
       color: #dc322f !important; }
       .modal .markdown-modal .member .member-buttons .btn-danger:hover, .modal .region-select-modal .member .member-buttons .btn-danger:hover, .modal .guild-settings-modal-members .member .member-buttons .btn-danger:hover {
-        color: #839496;
-        background-color: #dc322f !important; }
+        color: #eee8d5 !important;
+        background-color: #dc322f;
+        border-color: #cb4b16; }
   .modal .markdown-modal .markdown-modal-header, .modal .region-select-modal .markdown-modal-header, .modal .guild-settings-modal-members .markdown-modal-header {
     color: #93a1a1;
     border-bottom: 1px solid #839496; }
@@ -207,125 +246,164 @@ video, code, .image {
   .modal .markdown-modal .region-select-modal-option, .modal .region-select-modal .region-select-modal-option, .modal .guild-settings-modal-members .region-select-modal-option {
     background-color: #eee8d5;
     border-color: #839496;
-    color: #839496; }
+    color: #839496 !important; }
     .modal .markdown-modal .region-select-modal-option:hover, .modal .region-select-modal .region-select-modal-option:hover, .modal .guild-settings-modal-members .region-select-modal-option:hover {
       border-color: #268bd2; }
     .modal .markdown-modal .region-select-modal-option .region-select-name, .modal .region-select-modal .region-select-modal-option .region-select-name, .modal .guild-settings-modal-members .region-select-modal-option .region-select-name {
-      color: #93a1a1; }
+      color: #93a1a1 !important; }
   .modal .markdown-modal .region-select-modal-footer, .modal .region-select-modal .region-select-modal-footer, .modal .guild-settings-modal-members .region-select-modal-footer {
-    color: #839496; }
+    color: #839496 !important; }
 .modal .settings-right .authed-app, .modal .settings-inner .authed-app, .modal .form-header .authed-app, .modal .form-inner .authed-app {
   background-color: #002b36;
-  color: #657b83; }
-.modal .settings-right .header, .modal .settings-inner .header, .modal .form-header .header, .modal .form-inner .header {
-  color: #657b83; }
+  color: #657b83 !important; }
+  .modal .settings-right .authed-app .header, .modal .settings-inner .authed-app .header, .modal .form-header .authed-app .header, .modal .form-inner .authed-app .header {
+    color: #073642 !important; }
+  .modal .settings-right .authed-app .description .header, .modal .settings-right .authed-app .description .body, .modal .settings-right .authed-app .permissions .header, .modal .settings-right .authed-app .permissions .body, .modal .settings-inner .authed-app .description .header, .modal .settings-inner .authed-app .description .body, .modal .settings-inner .authed-app .permissions .header, .modal .settings-inner .authed-app .permissions .body, .modal .form-header .authed-app .description .header, .modal .form-header .authed-app .description .body, .modal .form-header .authed-app .permissions .header, .modal .form-header .authed-app .permissions .body, .modal .form-inner .authed-app .description .header, .modal .form-inner .authed-app .description .body, .modal .form-inner .authed-app .permissions .header, .modal .form-inner .authed-app .permissions .body {
+    color: #657b83 !important; }
+.modal .settings-right .header-info, .modal .settings-inner .header-info, .modal .form-header .header-info, .modal .form-inner .header-info {
+  color: #657b83 !important; }
 .modal .settings-right .body, .modal .settings-inner .body, .modal .form-header .body, .modal .form-inner .body {
-  color: #eee8d5; }
-.modal .settings-right .control-group .clipboard-input-inner, .modal .settings-inner .control-group .clipboard-input-inner, .modal .form-header .control-group .clipboard-input-inner, .modal .form-inner .control-group .clipboard-input-inner {
-  border-color: #93a1a1; }
-  .modal .settings-right .control-group .clipboard-input-inner::before, .modal .settings-inner .control-group .clipboard-input-inner::before, .modal .form-header .control-group .clipboard-input-inner::before, .modal .form-inner .control-group .clipboard-input-inner::before {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), #fdf6e3); }
-.modal .settings-right .control-group span, .modal .settings-inner .control-group span, .modal .form-header .control-group span, .modal .form-inner .control-group span {
-  color: #839496; }
-.modal .settings-right .control-group input, .modal .settings-right .control-group .theme-dark .user-popout .body .member-role-add, .theme-dark .user-popout .body .modal .settings-right .control-group .member-role-add, .modal .settings-right .control-group .theme-dark .user-popout .footer .member-role-add, .theme-dark .user-popout .footer .modal .settings-right .control-group .member-role-add, .modal .settings-right .control-group .theme-light .user-popout .body .member-role-add, .theme-light .user-popout .body .modal .settings-right .control-group .member-role-add, .modal .settings-right .control-group .theme-light .user-popout .footer .member-role-add, .theme-light .user-popout .footer .modal .settings-right .control-group .member-role-add, .modal .settings-inner .control-group input, .modal .settings-inner .control-group .theme-dark .user-popout .body .member-role-add, .theme-dark .user-popout .body .modal .settings-inner .control-group .member-role-add, .modal .settings-inner .control-group .theme-dark .user-popout .footer .member-role-add, .theme-dark .user-popout .footer .modal .settings-inner .control-group .member-role-add, .modal .settings-inner .control-group .theme-light .user-popout .body .member-role-add, .theme-light .user-popout .body .modal .settings-inner .control-group .member-role-add, .modal .settings-inner .control-group .theme-light .user-popout .footer .member-role-add, .theme-light .user-popout .footer .modal .settings-inner .control-group .member-role-add, .modal .form-header .control-group input, .modal .form-header .control-group .theme-dark .user-popout .body .member-role-add, .theme-dark .user-popout .body .modal .form-header .control-group .member-role-add, .modal .form-header .control-group .theme-dark .user-popout .footer .member-role-add, .theme-dark .user-popout .footer .modal .form-header .control-group .member-role-add, .modal .form-header .control-group .theme-light .user-popout .body .member-role-add, .theme-light .user-popout .body .modal .form-header .control-group .member-role-add, .modal .form-header .control-group .theme-light .user-popout .footer .member-role-add, .theme-light .user-popout .footer .modal .form-header .control-group .member-role-add, .modal .form-inner .control-group input, .modal .form-inner .control-group .theme-dark .user-popout .body .member-role-add, .theme-dark .user-popout .body .modal .form-inner .control-group .member-role-add, .modal .form-inner .control-group .theme-dark .user-popout .footer .member-role-add, .theme-dark .user-popout .footer .modal .form-inner .control-group .member-role-add, .modal .form-inner .control-group .theme-light .user-popout .body .member-role-add, .theme-light .user-popout .body .modal .form-inner .control-group .member-role-add, .modal .form-inner .control-group .theme-light .user-popout .footer .member-role-add, .theme-light .user-popout .footer .modal .form-inner .control-group .member-role-add {
-  background-color: #eee8d5;
   color: #073642 !important; }
-  .modal .settings-right .control-group input:focus, .modal .settings-right .control-group .theme-dark .user-popout .body .member-role-add:focus, .theme-dark .user-popout .body .modal .settings-right .control-group .member-role-add:focus, .modal .settings-right .control-group .theme-dark .user-popout .footer .member-role-add:focus, .theme-dark .user-popout .footer .modal .settings-right .control-group .member-role-add:focus, .modal .settings-right .control-group .theme-light .user-popout .body .member-role-add:focus, .theme-light .user-popout .body .modal .settings-right .control-group .member-role-add:focus, .modal .settings-right .control-group .theme-light .user-popout .footer .member-role-add:focus, .theme-light .user-popout .footer .modal .settings-right .control-group .member-role-add:focus, .modal .settings-inner .control-group input:focus, .modal .settings-inner .control-group .theme-dark .user-popout .body .member-role-add:focus, .theme-dark .user-popout .body .modal .settings-inner .control-group .member-role-add:focus, .modal .settings-inner .control-group .theme-dark .user-popout .footer .member-role-add:focus, .theme-dark .user-popout .footer .modal .settings-inner .control-group .member-role-add:focus, .modal .settings-inner .control-group .theme-light .user-popout .body .member-role-add:focus, .theme-light .user-popout .body .modal .settings-inner .control-group .member-role-add:focus, .modal .settings-inner .control-group .theme-light .user-popout .footer .member-role-add:focus, .theme-light .user-popout .footer .modal .settings-inner .control-group .member-role-add:focus, .modal .form-header .control-group input:focus, .modal .form-header .control-group .theme-dark .user-popout .body .member-role-add:focus, .theme-dark .user-popout .body .modal .form-header .control-group .member-role-add:focus, .modal .form-header .control-group .theme-dark .user-popout .footer .member-role-add:focus, .theme-dark .user-popout .footer .modal .form-header .control-group .member-role-add:focus, .modal .form-header .control-group .theme-light .user-popout .body .member-role-add:focus, .theme-light .user-popout .body .modal .form-header .control-group .member-role-add:focus, .modal .form-header .control-group .theme-light .user-popout .footer .member-role-add:focus, .theme-light .user-popout .footer .modal .form-header .control-group .member-role-add:focus, .modal .form-inner .control-group input:focus, .modal .form-inner .control-group .theme-dark .user-popout .body .member-role-add:focus, .theme-dark .user-popout .body .modal .form-inner .control-group .member-role-add:focus, .modal .form-inner .control-group .theme-dark .user-popout .footer .member-role-add:focus, .theme-dark .user-popout .footer .modal .form-inner .control-group .member-role-add:focus, .modal .form-inner .control-group .theme-light .user-popout .body .member-role-add:focus, .theme-light .user-popout .body .modal .form-inner .control-group .member-role-add:focus, .modal .form-inner .control-group .theme-light .user-popout .footer .member-role-add:focus, .theme-light .user-popout .footer .modal .form-inner .control-group .member-role-add:focus {
-    border-bottom-color: #268bd2; }
-.modal .settings-right .control-group .slider-bar, .modal .settings-inner .control-group .slider-bar, .modal .form-header .control-group .slider-bar, .modal .form-inner .control-group .slider-bar {
-  background: #839496; }
-  .modal .settings-right .control-group .slider-bar .slider-bar-fill, .modal .settings-inner .control-group .slider-bar .slider-bar-fill, .modal .form-header .control-group .slider-bar .slider-bar-fill, .modal .form-inner .control-group .slider-bar .slider-bar-fill {
-    background: #268bd2; }
-.modal .settings-right .control-group .slider-handle, .modal .settings-inner .control-group .slider-handle, .modal .form-header .control-group .slider-handle, .modal .form-inner .control-group .slider-handle {
-  background-color: #eee8d5;
-  border-color: #268bd2; }
-  .modal .settings-right .control-group .slider-handle span, .modal .settings-inner .control-group .slider-handle span, .modal .form-header .control-group .slider-handle span, .modal .form-inner .control-group .slider-handle span {
-    background-color: #fdf6e3;
-    border-color: #eee8d5;
-    color: #93a1a1; }
-    .modal .settings-right .control-group .slider-handle span::after, .modal .settings-inner .control-group .slider-handle span::after, .modal .form-header .control-group .slider-handle span::after, .modal .form-inner .control-group .slider-handle span::after {
-      border-color: #fdf6e3 transparent transparent transparent !important; }
+.modal .settings-right .control-group, .modal .settings-inner .control-group, .modal .form-header .control-group, .modal .form-inner .control-group {
+  color: #839496 !important; }
+  .modal .settings-right .control-group .li, .modal .settings-right .control-group .settings-name, .modal .settings-inner .control-group .li, .modal .settings-inner .control-group .settings-name, .modal .form-header .control-group .li, .modal .form-header .control-group .settings-name, .modal .form-inner .control-group .li, .modal .form-inner .control-group .settings-name {
+    color: #839496 !important; }
+  .modal .settings-right .control-group .region-select .region-select-inner, .modal .settings-inner .control-group .region-select .region-select-inner, .modal .form-header .control-group .region-select .region-select-inner, .modal .form-inner .control-group .region-select .region-select-inner {
+    color: #93a1a1 !important; }
+  .modal .settings-right .control-group .region-select button, .modal .settings-inner .control-group .region-select button, .modal .form-header .control-group .region-select button, .modal .form-inner .control-group .region-select button {
+    color: #268bd2; }
+  .modal .settings-right .control-group .clipboard-input-inner, .modal .settings-inner .control-group .clipboard-input-inner, .modal .form-header .control-group .clipboard-input-inner, .modal .form-inner .control-group .clipboard-input-inner {
+    border-color: #93a1a1; }
+  .modal .settings-right .control-group label, .modal .settings-inner .control-group label, .modal .form-header .control-group label, .modal .form-inner .control-group label {
+    color: #839496 !important; }
+  .modal .settings-right .control-group input, .modal .settings-right .control-group .theme-dark .user-popout .body .member-role-add, .theme-dark .user-popout .body .modal .settings-right .control-group .member-role-add, .modal .settings-right .control-group .theme-dark .user-popout .footer .member-role-add, .theme-dark .user-popout .footer .modal .settings-right .control-group .member-role-add, .modal .settings-right .control-group .theme-light .user-popout .body .member-role-add, .theme-light .user-popout .body .modal .settings-right .control-group .member-role-add, .modal .settings-right .control-group .theme-light .user-popout .footer .member-role-add, .theme-light .user-popout .footer .modal .settings-right .control-group .member-role-add, .modal .settings-inner .control-group input, .modal .settings-inner .control-group .theme-dark .user-popout .body .member-role-add, .theme-dark .user-popout .body .modal .settings-inner .control-group .member-role-add, .modal .settings-inner .control-group .theme-dark .user-popout .footer .member-role-add, .theme-dark .user-popout .footer .modal .settings-inner .control-group .member-role-add, .modal .settings-inner .control-group .theme-light .user-popout .body .member-role-add, .theme-light .user-popout .body .modal .settings-inner .control-group .member-role-add, .modal .settings-inner .control-group .theme-light .user-popout .footer .member-role-add, .theme-light .user-popout .footer .modal .settings-inner .control-group .member-role-add, .modal .form-header .control-group input, .modal .form-header .control-group .theme-dark .user-popout .body .member-role-add, .theme-dark .user-popout .body .modal .form-header .control-group .member-role-add, .modal .form-header .control-group .theme-dark .user-popout .footer .member-role-add, .theme-dark .user-popout .footer .modal .form-header .control-group .member-role-add, .modal .form-header .control-group .theme-light .user-popout .body .member-role-add, .theme-light .user-popout .body .modal .form-header .control-group .member-role-add, .modal .form-header .control-group .theme-light .user-popout .footer .member-role-add, .theme-light .user-popout .footer .modal .form-header .control-group .member-role-add, .modal .form-inner .control-group input, .modal .form-inner .control-group .theme-dark .user-popout .body .member-role-add, .theme-dark .user-popout .body .modal .form-inner .control-group .member-role-add, .modal .form-inner .control-group .theme-dark .user-popout .footer .member-role-add, .theme-dark .user-popout .footer .modal .form-inner .control-group .member-role-add, .modal .form-inner .control-group .theme-light .user-popout .body .member-role-add, .theme-light .user-popout .body .modal .form-inner .control-group .member-role-add, .modal .form-inner .control-group .theme-light .user-popout .footer .member-role-add, .theme-light .user-popout .footer .modal .form-inner .control-group .member-role-add {
+    background-color: #eee8d5;
+    color: #839496 !important; }
+    .modal .settings-right .control-group input:focus, .modal .settings-right .control-group .theme-dark .user-popout .body .member-role-add:focus, .theme-dark .user-popout .body .modal .settings-right .control-group .member-role-add:focus, .modal .settings-right .control-group .theme-dark .user-popout .footer .member-role-add:focus, .theme-dark .user-popout .footer .modal .settings-right .control-group .member-role-add:focus, .modal .settings-right .control-group .theme-light .user-popout .body .member-role-add:focus, .theme-light .user-popout .body .modal .settings-right .control-group .member-role-add:focus, .modal .settings-right .control-group .theme-light .user-popout .footer .member-role-add:focus, .theme-light .user-popout .footer .modal .settings-right .control-group .member-role-add:focus, .modal .settings-inner .control-group input:focus, .modal .settings-inner .control-group .theme-dark .user-popout .body .member-role-add:focus, .theme-dark .user-popout .body .modal .settings-inner .control-group .member-role-add:focus, .modal .settings-inner .control-group .theme-dark .user-popout .footer .member-role-add:focus, .theme-dark .user-popout .footer .modal .settings-inner .control-group .member-role-add:focus, .modal .settings-inner .control-group .theme-light .user-popout .body .member-role-add:focus, .theme-light .user-popout .body .modal .settings-inner .control-group .member-role-add:focus, .modal .settings-inner .control-group .theme-light .user-popout .footer .member-role-add:focus, .theme-light .user-popout .footer .modal .settings-inner .control-group .member-role-add:focus, .modal .form-header .control-group input:focus, .modal .form-header .control-group .theme-dark .user-popout .body .member-role-add:focus, .theme-dark .user-popout .body .modal .form-header .control-group .member-role-add:focus, .modal .form-header .control-group .theme-dark .user-popout .footer .member-role-add:focus, .theme-dark .user-popout .footer .modal .form-header .control-group .member-role-add:focus, .modal .form-header .control-group .theme-light .user-popout .body .member-role-add:focus, .theme-light .user-popout .body .modal .form-header .control-group .member-role-add:focus, .modal .form-header .control-group .theme-light .user-popout .footer .member-role-add:focus, .theme-light .user-popout .footer .modal .form-header .control-group .member-role-add:focus, .modal .form-inner .control-group input:focus, .modal .form-inner .control-group .theme-dark .user-popout .body .member-role-add:focus, .theme-dark .user-popout .body .modal .form-inner .control-group .member-role-add:focus, .modal .form-inner .control-group .theme-dark .user-popout .footer .member-role-add:focus, .theme-dark .user-popout .footer .modal .form-inner .control-group .member-role-add:focus, .modal .form-inner .control-group .theme-light .user-popout .body .member-role-add:focus, .theme-light .user-popout .body .modal .form-inner .control-group .member-role-add:focus, .modal .form-inner .control-group .theme-light .user-popout .footer .member-role-add:focus, .theme-light .user-popout .footer .modal .form-inner .control-group .member-role-add:focus {
+      border-bottom-color: #268bd2; }
+  .modal .settings-right .control-group .help-text, .modal .settings-inner .control-group .help-text, .modal .form-header .control-group .help-text, .modal .form-inner .control-group .help-text {
+    color: #93a1a1 !important; }
+  .modal .settings-right .control-group .slider-bar, .modal .settings-inner .control-group .slider-bar, .modal .form-header .control-group .slider-bar, .modal .form-inner .control-group .slider-bar {
+    background: #839496; }
+    .modal .settings-right .control-group .slider-bar .slider-bar-fill, .modal .settings-inner .control-group .slider-bar .slider-bar-fill, .modal .form-header .control-group .slider-bar .slider-bar-fill, .modal .form-inner .control-group .slider-bar .slider-bar-fill {
+      background: #268bd2; }
+  .modal .settings-right .control-group .slider-handle, .modal .settings-inner .control-group .slider-handle, .modal .form-header .control-group .slider-handle, .modal .form-inner .control-group .slider-handle {
+    background-color: #eee8d5;
+    border-color: #268bd2; }
+    .modal .settings-right .control-group .slider-handle span, .modal .settings-inner .control-group .slider-handle span, .modal .form-header .control-group .slider-handle span, .modal .form-inner .control-group .slider-handle span {
+      background-color: #fdf6e3;
+      border-color: #eee8d5;
+      color: #93a1a1; }
+      .modal .settings-right .control-group .slider-handle span::after, .modal .settings-inner .control-group .slider-handle span::after, .modal .form-header .control-group .slider-handle span::after, .modal .form-inner .control-group .slider-handle span::after {
+        border-color: #fdf6e3 transparent transparent transparent; }
 .modal .settings-right .tab-bar-item, .modal .settings-inner .tab-bar-item, .modal .form-header .tab-bar-item, .modal .form-inner .tab-bar-item {
   color: #839496 !important; }
   .modal .settings-right .tab-bar-item:hover, .modal .settings-inner .tab-bar-item:hover, .modal .form-header .tab-bar-item:hover, .modal .form-inner .tab-bar-item:hover {
-    border-bottom-color: #eee8d5 !important; }
+    border-bottom-color: #eee8d5; }
 .modal .settings-right .selected, .modal .settings-inner .selected, .modal .form-header .selected, .modal .form-inner .selected {
-  border-bottom-color: #268bd2 !important;
+  border-bottom-color: #268bd2;
   color: #268bd2 !important; }
   .modal .settings-right .selected:hover, .modal .settings-inner .selected:hover, .modal .form-header .selected:hover, .modal .form-inner .selected:hover {
-    border-bottom-color: #268bd2 !important; }
+    border-bottom-color: #268bd2; }
 .modal .settings-right .settings-inner, .modal .settings-right .settings-actions, .modal .settings-inner .settings-inner, .modal .settings-inner .settings-actions, .modal .form-header .settings-inner, .modal .form-header .settings-actions, .modal .form-inner .settings-inner, .modal .form-inner .settings-actions {
   background-color: #fdf6e3; }
 .modal .settings-header {
   background-color: rgba(0, 43, 54, 0.7);
-  color: #fdf6e3; }
+  color: #fdf6e3 !important; }
   .modal .settings-header .tab-bar-header {
-    color: #eee8d5 !important; }
+    color: #586e75 !important; }
   .modal .settings-header .tab-bar-item {
-    color: #657b83; }
+    color: #586e75 !important; }
     .modal .settings-header .tab-bar-item:hover, .modal .settings-header .tab-bar-item:focus {
-      color: #eee8d5; }
+      color: #657b83 !important; }
     .modal .settings-header .tab-bar-item::before {
       border-left-color: #268bd2; }
   .modal .settings-header .change-log-button-container a {
-    color: #cb4b16; }
+    color: #cb4b16 !important; }
 .modal .form-actions {
-  background-color: #eee8d5; }
-  .modal .form-actions .btn-default button {
+  background-color: #eee8d5 !important; }
+  .modal .form-actions .btn-default {
     background-color: #eee8d5 !important;
-    color: #93a1a1 !important;
+    color: #93a1a1;
     border-color: transparent; }
-    .modal .form-actions .btn-default button:hover {
-      border-bottom-color: #586e75 !important; }
+    .modal .form-actions .btn-default:hover {
+      border-bottom-color: #586e75; }
 .modal .form-inner, .modal .form-header, .modal .scroller {
-  background-color: #fdf6e3 !important; }
+  background-color: #fdf6e3; }
+  .modal .form-inner input, .modal .form-inner .theme-dark .user-popout .body .member-role-add, .theme-dark .user-popout .body .modal .form-inner .member-role-add, .modal .form-inner .theme-dark .user-popout .footer .member-role-add, .theme-dark .user-popout .footer .modal .form-inner .member-role-add, .modal .form-inner .theme-light .user-popout .body .member-role-add, .theme-light .user-popout .body .modal .form-inner .member-role-add, .modal .form-inner .theme-light .user-popout .footer .member-role-add, .theme-light .user-popout .footer .modal .form-inner .member-role-add, .modal .form-header input, .modal .form-header .theme-dark .user-popout .body .member-role-add, .theme-dark .user-popout .body .modal .form-header .member-role-add, .modal .form-header .theme-dark .user-popout .footer .member-role-add, .theme-dark .user-popout .footer .modal .form-header .member-role-add, .modal .form-header .theme-light .user-popout .body .member-role-add, .theme-light .user-popout .body .modal .form-header .member-role-add, .modal .form-header .theme-light .user-popout .footer .member-role-add, .theme-light .user-popout .footer .modal .form-header .member-role-add, .modal .scroller input, .modal .scroller .theme-dark .user-popout .body .member-role-add, .theme-dark .user-popout .body .modal .scroller .member-role-add, .modal .scroller .theme-dark .user-popout .footer .member-role-add, .theme-dark .user-popout .footer .modal .scroller .member-role-add, .modal .scroller .theme-light .user-popout .body .member-role-add, .theme-light .user-popout .body .modal .scroller .member-role-add, .modal .scroller .theme-light .user-popout .footer .member-role-add, .theme-light .user-popout .footer .modal .scroller .member-role-add {
+    background-color: #eee8d5;
+    color: #839496 !important; }
 
+.theme-dark .small-popout-box, .theme-dark .treatment-1 {
+  background: #fdf6e3 !important;
+  border-color: #fdf6e3;
+  color: #839496 !important; }
+  .theme-dark .small-popout-box .btn-item, .theme-dark .treatment-1 .btn-item {
+    color: #839496 !important; }
+    .theme-dark .small-popout-box .btn-item:hover, .theme-dark .treatment-1 .btn-item:hover {
+      color: #93a1a1 !important; }
+.theme-dark .guild-header ul.treatment-1 li:hover {
+  background-color: #eee8d5 !important; }
+.theme-dark .guild-header ul.treatment-1 li.invite a {
+  color: #268bd2 !important; }
+.theme-dark .guild-header ul.treatment-1 a {
+  color: #839496 !important; }
+.theme-dark .guild-header ul.treatment-1 .line {
+  border-bottom-color: #93a1a1; }
 .theme-dark .channel-textarea-inner, .theme-dark .channel-textarea-inner textarea, .theme-light .channel-textarea-inner .theme-dark textarea {
   background-color: #073642;
   border-color: #586e75; }
   .theme-dark .channel-textarea-inner textarea, .theme-light .channel-textarea-inner .theme-dark textarea textarea {
-    color: #93a1a1 !important; }
+    color: #93a1a1; }
 .theme-dark code {
   color: #657b83;
-  background-color: #fdf6e3 !important; }
+  background-color: #fdf6e3; }
 .theme-dark .flex-spacer, .theme-dark .title-wrap, .theme-dark .typing {
   background-color: #073642 !important; }
 .theme-dark .title-wrap {
   border-bottom-color: #073642 !important; }
+  .theme-dark .title-wrap .title {
+    color: #657b83 !important; }
   .theme-dark .title-wrap .channel-name {
-    color: #eee8d5 !important; }
+    color: #586e75 !important; }
     .theme-dark .title-wrap .channel-name::before {
       color: #586e75 !important; }
   .theme-dark .title-wrap .topic topic-expandable {
-    color: #073642 !important; }
+    color: #586e75 !important; }
     .theme-dark .title-wrap .topic topic-expandable::before {
       color: #586e75 !important; }
 .theme-dark .channel-members .member:hover, .theme-dark .channel-members .member:focus, .theme-dark .channel-members .member.popout-open {
-  background: linear-gradient(to right, #586e75 85%, #073642) !important; }
+  background: linear-gradient(to right, #586e75 85%, #073642); }
   .theme-dark .channel-members .member:hover .status, .theme-dark .channel-members .member:focus .status, .theme-dark .channel-members .member.popout-open .status {
-    border-color: #073642; }
+    border-color: #073642 !important; }
 .theme-dark .chat .new-messages-bar {
-  background-color: rgba(42, 161, 152, 0.7);
-  color: #fdf6e3;
-  border-radius: 10px; }
+  background-color: rgba(42, 161, 152, 0.7) !important;
+  color: #fdf6e3 !important;
+  -webkit-border-radius: 10px !important;
+  -moz-border-radius: 10px !important;
+  -ms-border-radius: 10px !important;
+  border-radius: 10px !important; }
 .theme-dark .chat .jump-to-present-bar {
   background-color: #657b83;
-  border-radius: radius;
-  color: #eee8d5; }
+  -webkit-border-radius: 10px !important;
+  -moz-border-radius: 10px !important;
+  -ms-border-radius: 10px !important;
+  border-radius: 10px !important;
+  color: #eee8d5 !important; }
 .theme-dark .chat .divider > span {
   color: #839496 !important; }
 .theme-dark .chat .divider-red > span {
   color: #dc322f !important; }
 .theme-dark .scroller.messages {
-  background-color: #002b36 !important; }
+  background-color: #002b36; }
   .theme-dark .scroller.messages .user-name {
-    color: #fdf6e3; }
+    color: #657b83; }
 .theme-dark .channel-members-wrap h2 {
-  color: #eee8d5 !important; }
+  color: #586e75 !important; }
 .theme-dark .channel-members-wrap .scroller {
-  background-color: #073642 !important; }
+  background-color: #073642; }
   .theme-dark .channel-members-wrap .scroller .member-activity {
-    color: #eee8d5 !important; }
+    color: #657b83 !important; }
 .theme-dark .message-group .comment .markup {
   color: #839496 !important; }
 .theme-dark .messages-wrapper .scroller-wrap ::-webkit-scrollbar-thumb,
@@ -339,25 +417,28 @@ video, code, .image {
   border-right-color: #073642;
   border-bottom-color: #002b36;
   border-top-color: #002b36;
+  -webkit-border-radius: 10px !important;
+  -moz-border-radius: 10px !important;
+  -ms-border-radius: 10px !important;
   border-radius: 10px !important; }
 .theme-dark .user-popout .header {
   background: rgba(7, 54, 66, 0.7); }
   .theme-dark .user-popout .header .username, .theme-dark .user-popout .header .nickname, .theme-dark .user-popout .header strong {
     color: #fdf6e3; }
   .theme-dark .user-popout .header .discriminator {
-    color: #eee8d5; }
+    color: #eee8d5 !important; }
   .theme-dark .user-popout .header .activity {
-    color: #586e75; }
+    color: #586e75 !important; }
   .theme-dark .user-popout .header .avatar-popout {
     border: none; }
 .theme-dark .user-popout .body, .theme-dark .user-popout .footer {
   background-color: #fdf6e3;
-  color: #839496; }
+  color: #839496 !important; }
   .theme-dark .user-popout .body textarea, .theme-dark .user-popout .footer textarea {
     color: #839496; }
     .theme-dark .user-popout .body textarea:focus, .theme-dark .user-popout .footer textarea:focus {
       background-color: #eee8d5;
-      color: #002b36; }
+      color: #002b36 !important; }
   .theme-dark .user-popout .body input, .theme-dark .user-popout .body .member-role-add, .theme-dark .user-popout .body .member-role-add button, .theme-dark .user-popout .footer input, .theme-dark .user-popout .footer .member-role-add, .theme-dark .user-popout .footer .member-role-add button {
     color: #839496;
     background-color: #eee8d5;
@@ -365,56 +446,80 @@ video, code, .image {
   .theme-dark .user-popout .body .member-role-add, .theme-dark .user-popout .footer .member-role-add {
     border-color: #93a1a1; }
   .theme-dark .user-popout .body .icon, .theme-dark .user-popout .footer .icon {
-    color: #eee8d5; }
+    color: #eee8d5 !important; }
   .theme-dark .user-popout .body .footer, .theme-dark .user-popout .footer .footer {
     border-top-color: #93a1a1; }
 
+.theme-light .small-popout-box, .theme-light .treatment-1 {
+  background: #073642 !important;
+  border-color: #073642;
+  color: #839496 !important; }
+  .theme-light .small-popout-box .btn-item, .theme-light .treatment-1 .btn-item {
+    color: #839496 !important; }
+    .theme-light .small-popout-box .btn-item:hover, .theme-light .treatment-1 .btn-item:hover {
+      color: #657b83 !important; }
+.theme-light .guild-header ul.treatment-1 li:hover {
+  background-color: #586e75 !important; }
+.theme-light .guild-header ul.treatment-1 li.invite a {
+  color: #268bd2 !important; }
+.theme-light .guild-header ul.treatment-1 a {
+  color: #839496 !important; }
+.theme-light .guild-header ul.treatment-1 .line {
+  border-bottom-color: #657b83; }
 .theme-light .channel-textarea-inner, .theme-dark .channel-textarea-inner .theme-light textarea, .theme-light .channel-textarea-inner textarea {
   background-color: #eee8d5;
   border-color: #93a1a1; }
   .theme-light .channel-textarea-inner textarea, .theme-dark .channel-textarea-inner .theme-light textarea textarea {
-    color: #073642 !important; }
+    color: #073642; }
 .theme-light code {
   color: #839496;
-  background-color: #073642 !important; }
+  background-color: #073642; }
 .theme-light .flex-spacer, .theme-light .title-wrap, .theme-light .typing {
   background-color: #eee8d5 !important; }
 .theme-light .title-wrap {
   border-bottom-color: #eee8d5 !important; }
+  .theme-light .title-wrap .title {
+    color: #839496 !important; }
   .theme-light .title-wrap .channel-name {
-    color: #002b36 !important; }
+    color: #93a1a1 !important; }
     .theme-light .title-wrap .channel-name::before {
       color: #93a1a1 !important; }
   .theme-light .title-wrap .topic topic-expandable {
-    color: #eee8d5 !important; }
+    color: #93a1a1 !important; }
     .theme-light .title-wrap .topic topic-expandable::before {
       color: #93a1a1 !important; }
 .theme-light .channel-members .member:hover, .theme-light .channel-members .member:focus, .theme-light .channel-members .member.popout-open {
-  background: linear-gradient(to right, #93a1a1 85%, #eee8d5) !important; }
+  background: linear-gradient(to right, #93a1a1 85%, #eee8d5); }
   .theme-light .channel-members .member:hover .status, .theme-light .channel-members .member:focus .status, .theme-light .channel-members .member.popout-open .status {
-    border-color: #eee8d5; }
+    border-color: #eee8d5 !important; }
 .theme-light .chat .new-messages-bar {
-  background-color: rgba(42, 161, 152, 0.7);
-  color: #002b36;
-  border-radius: 10px; }
+  background-color: rgba(42, 161, 152, 0.7) !important;
+  color: #002b36 !important;
+  -webkit-border-radius: 10px !important;
+  -moz-border-radius: 10px !important;
+  -ms-border-radius: 10px !important;
+  border-radius: 10px !important; }
 .theme-light .chat .jump-to-present-bar {
   background-color: #839496;
-  border-radius: radius;
-  color: #002b36; }
+  -webkit-border-radius: 10px !important;
+  -moz-border-radius: 10px !important;
+  -ms-border-radius: 10px !important;
+  border-radius: 10px !important;
+  color: #002b36 !important; }
 .theme-light .chat .divider > span {
   color: #586e75 !important; }
 .theme-light .chat .divider-red > span {
   color: #dc322f !important; }
 .theme-light .scroller.messages {
-  background-color: #fdf6e3 !important; }
+  background-color: #fdf6e3; }
   .theme-light .scroller.messages .user-name {
-    color: #002b36; }
+    color: #839496; }
 .theme-light .channel-members-wrap h2 {
-  color: #002b36 !important; }
+  color: #93a1a1 !important; }
 .theme-light .channel-members-wrap .scroller {
-  background-color: #eee8d5 !important; }
+  background-color: #eee8d5; }
   .theme-light .channel-members-wrap .scroller .member-activity {
-    color: #002b36 !important; }
+    color: #839496 !important; }
 .theme-light .message-group .comment .markup {
   color: #586e75 !important; }
 .theme-light .messages-wrapper .scroller-wrap ::-webkit-scrollbar-thumb,
@@ -428,25 +533,28 @@ video, code, .image {
   border-right-color: #eee8d5;
   border-bottom-color: #fdf6e3;
   border-top-color: #fdf6e3;
+  -webkit-border-radius: 10px !important;
+  -moz-border-radius: 10px !important;
+  -ms-border-radius: 10px !important;
   border-radius: 10px !important; }
 .theme-light .user-popout .header {
   background: rgba(238, 232, 213, 0.7); }
   .theme-light .user-popout .header .username, .theme-light .user-popout .header .nickname, .theme-light .user-popout .header strong {
     color: #002b36; }
   .theme-light .user-popout .header .discriminator {
-    color: #002b36; }
+    color: #002b36 !important; }
   .theme-light .user-popout .header .activity {
-    color: #93a1a1; }
+    color: #93a1a1 !important; }
   .theme-light .user-popout .header .avatar-popout {
     border: none; }
 .theme-light .user-popout .body, .theme-light .user-popout .footer {
   background-color: #073642;
-  color: #839496; }
+  color: #839496 !important; }
   .theme-light .user-popout .body textarea, .theme-light .user-popout .footer textarea {
     color: #839496; }
     .theme-light .user-popout .body textarea:focus, .theme-light .user-popout .footer textarea:focus {
       background-color: #586e75;
-      color: #fdf6e3; }
+      color: #fdf6e3 !important; }
   .theme-light .user-popout .body input, .theme-light .user-popout .body .member-role-add, .theme-light .user-popout .body .member-role-add button, .theme-light .user-popout .footer input, .theme-light .user-popout .footer .member-role-add, .theme-light .user-popout .footer .member-role-add button {
     color: #839496;
     background-color: #586e75;
@@ -454,7 +562,7 @@ video, code, .image {
   .theme-light .user-popout .body .member-role-add, .theme-light .user-popout .footer .member-role-add {
     border-color: #657b83; }
   .theme-light .user-popout .body .icon, .theme-light .user-popout .footer .icon {
-    color: #586e75; }
+    color: #586e75 !important; }
   .theme-light .user-popout .body .footer, .theme-light .user-popout .footer .footer {
     border-top-color: #657b83; }
 
