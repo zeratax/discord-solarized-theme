@@ -144,6 +144,11 @@ video, code, .image
 .checkbox
 	span
 		color: $light_base00 !important
+.message.mentioned
+	.message-text
+		background-color: rgba($orange, .3) !important
+		&::after
+			border-left-color:  $orange !important
 .ebr-theme-item, .ebr-plugin-item, .ebr-theme-item-info, .ebr-plugin-item-info
 	background-color: $light_base02 !important
 	color: $light_base00 !important
@@ -217,8 +222,17 @@ video, code, .image
 		color: $green !important
 		&:hover
 			color: $orange !important
+	code
+		color: $dark_base00 !important
+		background-color: $dark_base03 !important
+	textarea
+		color: $light_base00 !important
+		background-color: $light_base02
 	h3, h2, h1, .settings-wrapper, .user-settings-modal-accounts-list-description-inner, .checkbox, .role-name
 		color: $light_base00 !important
+	.markup
+		pre
+			background: $dark_base03
 	#instant-invite-modal .copy
 		@extend .bot-tag
 	.user-settings-modal-keybinds-header
@@ -267,11 +281,19 @@ video, code, .image
 		background-color: $light_base02
 		border-color: $light_base00
 		color: $light_base00 !important
-		&:hover
-			border-color: $light_base01
+		&:hover, &:active
+			border-color: $light_base00
 	.Select-menu-outer
 		@extend .Select-control
 		background-color: $light_base02
+		color: $light_base00 !important
+	.Select-option
+		background-color: $light_base02 !important
+		color: $light_base00 !important
+		&:hover
+			background-color: $light_base03 !important
+	.Select-placeholder
+		color: $light_base00 !important
 	.is-open > .Select-control
 		background-color: $light_base02
 	.search-bar
@@ -337,6 +359,8 @@ video, code, .image
 	.settings-right, .settings-inner, .form-header, .form-inner
 		input
 			@extend body
+		p
+			color: $light_base00 !important
 		.settings-connections-wrapper
 			span
 				color: $light_base00 !important
@@ -438,6 +462,13 @@ video, code, .image
 			color: $light_base00 !important
 @each $theme, $X_base03, $X_base02, $X_base01, $X_base00, $X_base0, $X_base1, $X_base2, $X_base3, $Y_base03, $Y_base02, $Y_base01, $Y_base00, $Y_base0, $Y_base1, $Y_base2, $Y_base3 in $themes
 	.theme-#{$theme}
+		.scroller-wrap.scroller
+			::-webkit-scrollbar-thumb
+				background-color: $X_base03
+				border: 0px
+			::-webkit-scrollbar-track-piece
+				background-color: $X_base02
+				border-color: $X_base03
 		.small-popout-box, .treatment-1, .color-picker-popout
 			background: $Y_base03 !important
 			border-color: $Y_base03
@@ -449,6 +480,25 @@ video, code, .image
 			input
 				background: $Y_base02 !important
 				color: $Y_base00 !important
+		#voice-connection-popout
+			header
+				background-color: rgba($X_base03, .7)
+				color: $X_base00 !important
+			section
+				@extend .small-popout-box
+				.secured
+					color: $green !important
+					&::before
+						-webkit-filter: hue-rotate(300deg)
+		.messages-popout-wrap
+			background: $X_base02
+			color: $X_base00 !important
+			.header
+				background-color: $X_base03
+				color: $X_base01 !important
+			.message-group
+				background-color: $X_base03 !important
+				color: $X_base00 !important
 		.guild-header ul.treatment-1
 			li:hover
 				background-color: $Y_base02 !important
@@ -527,7 +577,7 @@ video, code, .image
 		.embed-description
 			color: $X_base01 !important
 		.messages-wrapper .scroller-wrap,
-		.friends-table .scroller-wrap
+		.friends-table .scroller-wrap, .messages-popout-wrap .scroller-wrap
 			::-webkit-scrollbar-thumb
 				background-color: $X_base03
 				border: 0px
