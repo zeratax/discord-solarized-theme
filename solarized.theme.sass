@@ -65,26 +65,24 @@ body
 video, code, .image
 	@extend .avatar-large
 	+box-shadow(0px, 0px, 15px, 0px, rgba(0,0,0,0.4))
-.hljs-attribute
-	color: $orange
+.hljs .css
+	color: $dark_base00
 .hljs-important
 	color: $red
-.hljs-built_in
-	color: $blue
-.hljs-number, .hljs-value
+.hljs-number, .hljs-value, .hljs-class, .hljs-built_in
 	color: $blue
 .hljs-comment
-	color: $dark_base1
-.hljs-keyword
-	color: $green
+	color: $dark_base01
+.hljs-keyword, .hljs-attribute
+	color: $green !important
 .highlight,
 .scroller.messages a, .settings-right a, .settings-new-password, .link-button, .region-select-modal-header, .form-header header
 	color: $blue !important
 .changelog-added
 	background-color: $green !important
-.changelog-fixed, .btn-primary[type=button], .install-button, .theme-install-button, .plugin-install-button, .bot-tag
+.changelog-fixed, .btn-primary, .install-button, .theme-install-button, .plugin-install-button, .bot-tag
 	@extend body
-	background-color: $blue !important
+	background-color: $blue
 	color: $light_base02 !important
 .changelog-in-progress
 	background-color: $orange !important
@@ -92,11 +90,16 @@ video, code, .image
 .danger
 	background-color: $red !important
 	color: $light_base02 !important
-.btn-warning, .update-button, .theme-update-button, .plugin-update-button, .btn-delete, .account-warning, .btn-primary[type=submit]
+.btn-warning, .update-button, .theme-update-button, .plugin-update-button, .btn-delete, .account-warning, .btn.btn-primary.red, .icon-delete, button[icon*="delete"]
 	@extend body
-	background-color: $red !important
+	background-color: $red
 	color: $light_base02 !important
-.view-source-button, button .green
+	&:disabled
+		background-color: $light_base00 !important
+		color: $light_base02 !important
+.btn:last-of-type:not(:first-of-type):hover, .btn-confirm:hover
+	color: $light_base02 !important
+.view-source-button, button .green, .btn-add-keybind
 	@extend body
 	background-color: $green !important
 	color: $light_base02 !important
@@ -106,7 +109,7 @@ video, code, .image
 	border-color: $light_base00 !important
 .btn-confirm:hover
 	background-color: $red !important
-	color: $light_base01 !important
+	color: $light_base01
 	.btn
 		@extend .btn-confirm:hover
 .btn-help
@@ -151,6 +154,60 @@ video, code, .image
 		border-color: $orange
 .themes-header, .plugins-header
 	color: $light_base00 !important
+.CodeMirror
+	color: $dark_base00
+	background-color: $dark_base03 !important
+	.linenumber, .CodeMirror-gutters
+		color: $dark_base00 !important
+		background-color: $dark_base02
+		border-right-color: $dark_base01
+	.CodeMirror-line
+		color: $red !important
+	.cm-tag, .cm-qualifier, .cm-variable-2
+		color: $blue !important
+	.cm-keyword, .cm-atom, .cm-number, .cm-variable
+		color: $cyan !important
+	.cm-meta, .cm-property
+		color: $green !important
+	.cm-comment
+		color: $dark_base02 !important
+	.cm-string, .cm-variable-3
+		color: $orange !important
+	.CodeMirror-vscrollbar, .CodeMirror-hscrollbar, .CodeMirror-code
+		::-webkit-scrollbar-thumb
+			background-color: $light_base02
+			border: 0px
+		::-webkit-scrollbar-track-piece
+			background-color: $light_base03
+			border-color: $light_base02
+#bd-customcss-detach-container
+	background-color: $dark_base03
+#bd-customcss-attach-controls
+	background-color: $dark_base02
+	border-color: $dark_base01
+	border-top: $dark_base01 !important
+	span
+		color: $dark_base00 !important
+.bd-pane
+	.bda-slist
+		li
+			background-color: $light_base02
+			border-top-color: $light_base01
+			border-bottom-color: $light_base01
+			.bda-description
+				background-color: $light_base02
+				color: $light_base00 !important
+			.bda-name
+				color: $light_base01 !important
+			.scroller-wrap
+				::-webkit-scrollbar-thumb
+					background-color: $light_base02
+					border: 0px
+				::-webkit-scrollbar-track-piece
+					background-color: $light_base03
+					border-color: $light_base02
+	div[style*="2E3136"]
+		background-color: $light_base01 !important
 .modal
 	input
 		&::selection
@@ -160,28 +217,21 @@ video, code, .image
 		color: $green !important
 		&:hover
 			color: $orange !important
-	span
-		color: $light_base00
 	h3, h2, h1, .settings-wrapper, .user-settings-modal-accounts-list-description-inner, .checkbox, .role-name
 		color: $light_base00 !important
 	#instant-invite-modal .copy
 		@extend .bot-tag
+	.user-settings-modal-keybinds-header
+		.account-warning
+			background-color: $red
 	.clipboard-input-inner button:first-of-type:before
 		background: linear-gradient(to right,rgba(255,255,255,0),$light_base02)
 	.disabled-for-everyone:hover
 		color: $red !important
-	.CodeMirror
-		color: $dark_base00
-		background-color: $dark_base03 !important
-		.linenumber
-			color: $dark_base00 !important
-			background-color: $dark_base02
-		.cm-tag, .cm-qualifier, .cm-property, .cm-string, .cm-variable-3
-			color: $dark_base01 !important
-		.cm-keyword, .cm-atom, .cm-number
-			color: $cyan !important2
 	.connection-header, .connection-name, .connection-divider, .checkbox
 		color: $light_base02 !important
+		span
+			color: $light_base02 !important
 	.now-playing .no-detection
 		background: $light_base00
 		color: $light_base02 !important
@@ -209,14 +259,10 @@ video, code, .image
 	.scroller-wrap
 		::-webkit-scrollbar-thumb
 			background-color: $light_base03
-			border-color: $light_base01
+			border: 0px
 		::-webkit-scrollbar-track-piece
-			background-color: $light_base03
-			border-left-color: $light_base02
-			border-right-color: $light_base02
-			border-bottom-color: $light_base03
-			border-top-color: $light_base03
-			+border-radius($edge-radius)
+			background-color: $light_base02
+			border-color: $light_base03
 	.Select-control,
 		background-color: $light_base02
 		border-color: $light_base00
@@ -249,6 +295,11 @@ video, code, .image
 			border-bottom-color: $light_base00
 		.member
 			border-top-color: $light_base00
+			span bot-tag
+				background-color: $blue
+				color: $light_base02 !important
+			.member-username
+				color: $light_base00
 			.member-buttons
 				.btn
 					background-color: $light_base03
@@ -269,6 +320,8 @@ video, code, .image
 			border-bottom: 1px solid $light_base00
 		.scroller
 			color: $light_base01
+			h1
+				color: $light_base02 !important
 		.markdown-modal-footer
 			background-color: $light_base03
 		.region-select-modal-option
@@ -284,6 +337,19 @@ video, code, .image
 	.settings-right, .settings-inner, .form-header, .form-inner
 		input
 			@extend body
+		.settings-connections-wrapper
+			span
+				color: $light_base00 !important
+			.connection-options
+				span
+					color: $light_base02 !important
+		.draggable
+			color: $blue
+			border-bottom-color: $blue
+			&:hover
+				border-left-color: rgba($blue, .7)
+			.selected
+				border-left-color: $blue
 		.authed-app
 			background-color: $dark_base03
 			color: $dark_base00 !important
@@ -296,6 +362,9 @@ video, code, .image
 			color: $dark_base00 !important
 		.body
 			color: $dark_base02 !important
+		.control-groups
+			span
+				color: $light_base00 !important
 		.control-group
 			color: $light_base00 !important
 			.li, .settings-name
@@ -308,7 +377,7 @@ video, code, .image
 			.clipboard-input-inner
 				border-color: $light_base01
 			label
-				color: $light_base00 !important
+				color: $light_base00
 			input
 				background-color: $light_base02
 				color: $light_base00 !important
@@ -334,7 +403,7 @@ video, code, .image
 			&:hover
 				border-bottom-color: $light_base02
 		.selected
-			border-bottom-color: $blue
+			border-bottom: 2px solid $blue !important
 			color: $blue !important
 			&:hover
 				border-bottom-color: $blue
@@ -369,7 +438,7 @@ video, code, .image
 			color: $light_base00 !important
 @each $theme, $X_base03, $X_base02, $X_base01, $X_base00, $X_base0, $X_base1, $X_base2, $X_base3, $Y_base03, $Y_base02, $Y_base01, $Y_base00, $Y_base0, $Y_base1, $Y_base2, $Y_base3 in $themes
 	.theme-#{$theme}
-		.small-popout-box, .treatment-1
+		.small-popout-box, .treatment-1, .color-picker-popout
 			background: $Y_base03 !important
 			border-color: $Y_base03
 			color: $Y_base00 !important
@@ -377,6 +446,9 @@ video, code, .image
 				color: $Y_base00 !important
 				&:hover
 					color: $Y_base01 !important
+			input
+				background: $Y_base02 !important
+				color: $Y_base00 !important
 		.guild-header ul.treatment-1
 			li:hover
 				background-color: $Y_base02 !important
@@ -392,10 +464,10 @@ video, code, .image
 			border-color: $X_base01
 			textarea
 				@extend .channel-textarea-inner
-				color: $X_base1
+				color: $X_base1 !important
 		code
 			color: $X_base00
-			background-color: $Y_base03
+			background-color: $Y_base03 !important
 		.flex-spacer, .typing
 			background-color: $X_base02 !important
 		.title-wrap
@@ -407,7 +479,7 @@ video, code, .image
 				color: $X_base01 !important
 				&::before
 					color: $X_base01 !important
-			.topic topic-expandable
+			.topic .topic-expandable
 				color: $X_base01 !important
 				&::before
 					color: $X_base01 !important
@@ -451,24 +523,26 @@ video, code, .image
 				.member-activity
 					color: $X_base00 !important
 		.message-group .comment .markup
-			color: $X_base0 !important
+			color: $X_base00 !important
+		.embed-description
+			color: $X_base01 !important
 		.messages-wrapper .scroller-wrap,
 		.friends-table .scroller-wrap
 			::-webkit-scrollbar-thumb
 				background-color: $X_base03
-				border-color: $X_base01
+				border: 0px
 			::-webkit-scrollbar-track-piece
-				background-color: $X_base03
-				border-left-color: $X_base02
-				border-right-color: $X_base02
-				border-bottom-color: $X_base03
-				border-top-color: $X_base03
-				+border-radius($edge-radius)
+				background-color: $X_base02
+				border-color: $X_base03
 		.user-popout
 			@extend body
 			.header
 				.username, .nickname, strong
 					color: $X_base3
+				.bot-tag-invert
+					@extend body
+					background-color: $Y_base02 !important
+					color: $blue !important
 				.discriminator
 					color: $X_base2 !important
 				.activity
