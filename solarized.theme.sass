@@ -40,17 +40,18 @@ $themes: (dark, $dark_base03, $dark_base02, $dark_base01, $dark_base00, $dark_ba
 	-ms-border-radius:     $radius !important
 	border-radius:         $radius !important
 
-=box-shadow($hor, $ver, $blur, $spread, $color)
-	-webkit-box-shadow:		$hor $ver $blur $spread $color
-	-moz-box-shadow:			$hor $ver $blur $spread $color
-	-ms-box-shadow:				$hor $ver $blur $spread $color
-	box-shadow:						$hor $ver $blur $spread $color
+=box-shadow($hor, $ver, $blur, $spread, $color, $important:"")
+	-webkit-box-shadow:		$hor $ver $blur $spread $color $important
+	-moz-box-shadow:			$hor $ver $blur $spread $color $important
+	-ms-box-shadow:				$hor $ver $blur $spread $color $important
+	box-shadow:						$hor $ver $blur $spread $color $important
 
 //start
 body
 	color: pink !important
 	font-family: $font_0
 	font-weight: light
+	font-size: 13px
 ::selection
 	color: $light_base03 !important
 	background: $blue !important
@@ -61,7 +62,7 @@ body
 	+border-radius($edge-radius)
 .avatar-uploader-inner
 	@extend .avatar-large
-	border-color: $light_base02
+	border-color: $light_base02 !important
 video, code, .image
 	@extend .avatar-large
 	+box-shadow(0px, 0px, 15px, 0px, rgba(0,0,0,0.4))
@@ -82,7 +83,7 @@ video, code, .image
 	background-color: $green !important
 .changelog-fixed, .btn-primary, .install-button, .theme-install-button, .plugin-install-button, .bot-tag
 	@extend body
-	background-color: $blue
+	background-color: $blue !important
 	color: $light_base02 !important
 .changelog-in-progress
 	background-color: $orange !important
@@ -90,9 +91,9 @@ video, code, .image
 .danger
 	background-color: $red !important
 	color: $light_base02 !important
-.btn-warning, .update-button, .theme-update-button, .plugin-update-button, .btn-delete, .account-warning, .btn.btn-primary.red, .icon-delete, button[icon*="delete"]
+.btn-warning, .update-button, .theme-update-button, .plugin-update-button, .btn-delete, .account-warning, .btn-primary.red, .icon-delete, button[icon*="delete"]
 	@extend body
-	background-color: $red
+	background-color: $red !important
 	color: $light_base02 !important
 	&:disabled
 		background-color: $light_base00 !important
@@ -144,11 +145,18 @@ video, code, .image
 .checkbox
 	span
 		color: $light_base00 !important
+.checkbox .checkbox-inner input[type=checkbox]:checked+span:after, .checkbox .checkbox-inner input[type=checkbox]:checked+span
+	background-color: $blue
+.checkbox .checkbox-inner span:after, .checkbox .checkbox-inner span
+	background-color: $light_base02
 .message.mentioned
 	.message-text
 		background-color: rgba($orange, .3) !important
 		&::after
 			border-left-color:  $orange !important
+.scroller.messages-popout
+	overflow-y: scroll
+	overflow-x: hidden
 .ebr-theme-item, .ebr-plugin-item, .ebr-theme-item-info, .ebr-plugin-item-info
 	background-color: $light_base02 !important
 	color: $light_base00 !important
@@ -178,13 +186,6 @@ video, code, .image
 		color: $dark_base02 !important
 	.cm-string, .cm-variable-3
 		color: $orange !important
-	.CodeMirror-vscrollbar, .CodeMirror-hscrollbar, .CodeMirror-code
-		::-webkit-scrollbar-thumb
-			background-color: $light_base02
-			border: 0px
-		::-webkit-scrollbar-track-piece
-			background-color: $light_base03
-			border-color: $light_base02
 #bd-customcss-detach-container
 	background-color: $dark_base03
 #bd-customcss-attach-controls
@@ -213,6 +214,9 @@ video, code, .image
 					border-color: $light_base02
 	div[style*="2E3136"]
 		background-color: $light_base01 !important
+#bd-settings-pane, #bd-emotes-pane, #bd-plugins-pane, #bd-themes-pane
+	span
+		color: $light_base00 !important
 .modal
 	input
 		&::selection
@@ -233,11 +237,18 @@ video, code, .image
 	.markup
 		pre
 			background: $dark_base03
+	.image
+		+box-shadow(0px, 0px, 0px, 0px, transparent, !important)
 	#instant-invite-modal .copy
 		@extend .bot-tag
 	.user-settings-modal-keybinds-header
 		.account-warning
 			background-color: $red
+			p
+				color: $light_base02 !important
+		.btn-add-keybind
+			font-size: 11px
+			font-weight: bold
 	.clipboard-input-inner button:first-of-type:before
 		background: linear-gradient(to right,rgba(255,255,255,0),$light_base02)
 	.disabled-for-everyone:hover
@@ -306,10 +317,17 @@ video, code, .image
 				background: $blue
 				&::before, &::after
 					background:  $light_base01
-	.markdown-modal .selectable
+	.guild-settings-modal
+		span
+			color: $light_base00 !important
+	.markdown-modal
 		color: $light_base00 !important
+		+border-radius(5px)
 		.markdown-modal-header
 			border-bottom-color: $light_base00
+		.scroller
+			border-bottom-left-radius: 5px
+			border-bottom-right-radius: 5px
 	.markdown-modal, .region-select-modal, .guild-settings-modal-members
 		-webkit-box-shadow: 0px, 0px, 15px, 0px, rgba(0,0,0,0.4)
 		background-color: $light_base03
@@ -317,11 +335,11 @@ video, code, .image
 			border-bottom-color: $light_base00
 		.member
 			border-top-color: $light_base00
-			span bot-tag
-				background-color: $blue
-				color: $light_base02 !important
 			.member-username
 				color: $light_base00
+				.bot-tag
+					background-color: $blue
+					color: $light_base02 !important
 			.member-buttons
 				.btn
 					background-color: $light_base03
@@ -339,7 +357,7 @@ video, code, .image
 						border-color: $orange
 		.markdown-modal-header
 			color: $light_base01
-			border-bottom: 1px solid $light_base00
+			border-bottom-color: $light_base00
 		.scroller
 			color: $light_base01
 			h1
@@ -369,11 +387,11 @@ video, code, .image
 					color: $light_base02 !important
 		.draggable
 			color: $blue
-			border-bottom-color: $blue
 			&:hover
-				border-left-color: rgba($blue, .7)
-			.selected
-				border-left-color: $blue
+				border-left-color: rgba($blue, .3)
+		.selected
+			border-left-color: $blue
+			border-bottom-color: $blue
 		.authed-app
 			background-color: $dark_base03
 			color: $dark_base00 !important
@@ -469,16 +487,33 @@ video, code, .image
 			::-webkit-scrollbar-track-piece
 				background-color: $X_base02
 				border-color: $X_base03
-		.small-popout-box, .treatment-1, .color-picker-popout
-			background: $Y_base03 !important
+		.small-popout-box, .treatment-1, .color-picker-popout, #bda-qem, .emoji-picker, #bda-qem-twitch-container, #bda-qem-favourite-container
+			background-color: $Y_base03 !important
 			border-color: $Y_base03
 			color: $Y_base00 !important
+			button
+				color: $Y_base01 !important
+			.category, .search-bar
+				background-color: $Y_base03 !important
+			.search-bar-clear
+				background: $blue
+				&::before, &::after
+					background:  $light_base01
+			.popout
+				background-color: $light_base02
+			.scroller-wrap
+				::-webkit-scrollbar-thumb
+					background-color: $Y_base03
+					border: 0px
+				::-webkit-scrollbar-track-piece
+					background-color: $Y_base02
+					border-color: $Y_base03
 			.btn-item
 				color: $Y_base00 !important
 				&:hover
 					color: $Y_base01 !important
 			input
-				background: $Y_base02 !important
+				background-color: $Y_base02 !important
 				color: $Y_base00 !important
 		#voice-connection-popout
 			header
@@ -490,15 +525,68 @@ video, code, .image
 					color: $green !important
 					&::before
 						-webkit-filter: hue-rotate(300deg)
-		.messages-popout-wrap
-			background: $X_base02
+		.messages-popout-wrap, .channel-textarea-autocomplete-inner
+			background-color: $X_base02
 			color: $X_base00 !important
 			.header
 				background-color: $X_base03
 				color: $X_base01 !important
-			.message-group
+			header
+				strong
+					color: $blue !important
+			.channel-textarea-autocomplete-inner.header
+				border-bottom-color: $X_base00
+			.message-group, ul
 				background-color: $X_base03 !important
 				color: $X_base00 !important
+				li[class*=active]
+					background-color: $X_base00
+			.title
+				color: $X_base01 !important
+			.value
+				color: $blue !important
+			.tab-bar-item, .label
+				color: $X_base00 !important
+			.selected
+				color: $blue !important
+				border-bottom-color: $blue !important
+				.user-popout
+					@extend body
+					.header
+						.username, .nickname, strong
+							color: $X_base3
+						.bot-tag-invert
+							@extend body
+							background-color: $Y_base02 !important
+							color: $blue !important
+						.discriminator
+							color: $X_base2 !important
+						.activity
+							color: $X_base01 !important
+						background: rgba( $X_base02, .7 )
+						//-webkit-filter: hue-rotate(270deg)
+						.avatar-popout
+							//-webkit-filter: hue-rotate(30deg)
+							border: none
+					.body, .footer
+						background-color: $Y_base03
+						color: $Y_base00 !important
+						textarea
+							color: $Y_base00
+							&:focus
+								background-color: $Y_base02
+								color: $Y_base2 !important
+						input, .member-role-add button
+							color: $Y_base00
+							background-color: $Y_base02
+							border-color: $Y_base01
+						.member-role-add
+							@extend input
+							border-color: $Y_base01
+						.icon
+							color: $Y_base02 !important
+						.footer
+							border-top-color: $Y_base01
 		.guild-header ul.treatment-1
 			li:hover
 				background-color: $Y_base02 !important
@@ -584,40 +672,3 @@ video, code, .image
 			::-webkit-scrollbar-track-piece
 				background-color: $X_base02
 				border-color: $X_base03
-		.user-popout
-			@extend body
-			.header
-				.username, .nickname, strong
-					color: $X_base3
-				.bot-tag-invert
-					@extend body
-					background-color: $Y_base02 !important
-					color: $blue !important
-				.discriminator
-					color: $X_base2 !important
-				.activity
-					color: $X_base01 !important
-				background: rgba( $X_base02, .7 )
-				//-webkit-filter: hue-rotate(270deg)
-				.avatar-popout
-					//-webkit-filter: hue-rotate(30deg)
-					border: none
-			.body, .footer
-				background-color: $Y_base03
-				color: $Y_base00 !important
-				textarea
-					color: $Y_base00
-					&:focus
-						background-color: $Y_base02
-						color: $Y_base2 !important
-				input, .member-role-add button
-					color: $Y_base00
-					background-color: $Y_base02
-					border-color: $Y_base01
-				.member-role-add
-					@extend input
-					border-color: $Y_base01
-				.icon
-					color: $Y_base02 !important
-				.footer
-					border-top-color: $Y_base01
