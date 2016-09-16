@@ -4,7 +4,7 @@ Discord theme based on https://github.com/altercation/solarized
 ##Install
 You have to options to use this theme:
 
-**1.**  Use **BetterDiscord** and put the .[css file](https://github.com/ZerataX/discord-solarized-theme/blob/master/solarized.theme.css) in the `/BetterDiscord/themes/` folder or use [evenBetterRepo](https://github.com/IRDeNial/BD-Even-Better-Repo)
+**1.**  Use **BetterDiscord** and put the [.theme.css file](https://raw.githubusercontent.com/ZerataX/discord-solarized-theme/master/solarizeds.theme.css) in the `/BetterDiscord/themes/` folder or use [evenBetterRepo](https://github.com/IRDeNial/BD-Even-Better-Repo)
 
 **2.**  Install something like **Stylish**
 
@@ -13,7 +13,7 @@ You have to options to use this theme:
 **[Firefox](https://addons.mozilla.org/de/firefox/addon/stylish/)**
     
 ##Config
-Use the [.sass file](https://raw.githubusercontent.com/ZerataX/discord-solarized-theme/master/solarized.theme.sass) to quickly change the colorscheme.
+Use the [.sass file](https://raw.githubusercontent.com/ZerataX/discord-solarized-theme/master/solarized.sass) to quickly change the colorscheme.
 Now you just need to recompile the css.
 You again have to options:
 
@@ -21,9 +21,14 @@ You again have to options:
 
 ```
 gem install sass
-sass --update solarized.theme.sass:solarized.theme.css
+sass --update solarized.sass:solarized.theme.css
 ```
+
+add `--style compressed' to create a minified css
+
 **you may need to adjust your `$PATH` to include ruby gem**
+
+**your theme will not be automatically updated if you compile it yourself**
 
 **2.** http://www.sassmeister.com/ and __make sure your syntax is set to *sass*__
 
