@@ -27,9 +27,11 @@ $dark_base2:		$light_base02
 $dark_base3:		$light_base03
 
 //fonts
+//if you change font you probably have to manually have to change font sizes manually
 $font_0: "Source Code Pro for Powerline"
 
 //other
+//change this to 0 if you're annoyed by the added round borders
 $edge-radius: 10px
 $themes: (dark, $dark_base03, $dark_base02, $dark_base01, $dark_base00, $dark_base0, $dark_base1, $dark_base2, $dark_base3, $light_base03, $light_base02, $light_base01, $light_base00, $light_base1, $light_base2, $light_base3),(light, $light_base03, $light_base02, $light_base01, $light_base00, $light_base1, $light_base2, $light_base3, $dark_base03, $dark_base02, $dark_base01, $dark_base00, $dark_base0, $dark_base1, $dark_base2, $dark_base3)
 
@@ -56,13 +58,18 @@ body
 	color: $light_base03 !important
 	background: $blue !important
 .message-group
-	.comment .markup pre
-		border: 0px solid black
+	.comment
+		.user-name
+			color: $light_base01
+		.markup pre
+			border: 0px solid black
+			background: $dark_base03
 .avatar-large, .avatar-popout, .avatar-hint, .avatar-small, .avatar-xxlarge
 	+border-radius($edge-radius)
 .avatar-uploader-inner
 	@extend .avatar-large
 	border-color: $light_base02 !important
+// you may wanna delete the drop shadow here
 video, code, .image
 	@extend .avatar-large
 	+box-shadow(0px, 0px, 15px, 0px, rgba(0,0,0,0.4))
@@ -145,13 +152,19 @@ video, code, .image
 .checkbox
 	span
 		color: $light_base00 !important
+.checkbox .checkbox-inner input[type=checkbox]+span
+	border-color: $light_base01
 .checkbox .checkbox-inner input[type=checkbox]:checked+span:after, .checkbox .checkbox-inner input[type=checkbox]:checked+span
 	background-color: $blue
+.checkbox .checkbox-inner input[type=checkbox]:checked+span
+	border-color: $blue
 .checkbox .checkbox-inner span:after, .checkbox .checkbox-inner span
 	background-color: $light_base02
 .message.mentioned
 	.message-text
 		background-color: rgba($orange, .3) !important
+		border-top-right-radius: $edge-radius
+		border-bottom-right-radius: $edge-radius
 		&::after
 			border-left-color:  $orange !important
 .scroller.messages-popout
@@ -170,6 +183,8 @@ video, code, .image
 .CodeMirror
 	color: $dark_base00
 	background-color: $dark_base03 !important
+	border: 0px !important
+	border-color: transparent !important
 	.linenumber, .CodeMirror-gutters
 		color: $dark_base00 !important
 		background-color: $dark_base02
@@ -186,15 +201,34 @@ video, code, .image
 		color: $dark_base02 !important
 	.cm-string, .cm-variable-3
 		color: $orange !important
-#bd-customcss-detach-container
-	background-color: $dark_base03
 #bd-customcss-attach-controls
 	background-color: $dark_base02
-	border-color: $dark_base01
-	border-top: $dark_base01 !important
+	border: 0px !important
+	border-color: $light_base03
+	border-top: 0px !important
+	+box-shadow(0px, 0px, 0px, 0px, transparent, !important)
 	span
 		color: $dark_base00 !important
 .bd-pane
+	#bd-customcss-innerpane
+		button
+			color: $dark_base02 !important
+		.checkbox .disabled
+			span
+				color: $dark_base1 !important
+		.checkbox
+			border-color: $blue
+			span
+				color: $dark_base00 !important
+		.checkbox .checkbox-inner input[type=checkbox]+span
+			border-color: $dark_base01
+		.checkbox .checkbox-inner input[type=checkbox]:checked+span:after, .checkbox .checkbox-inner input[type=checkbox]:checked+span
+			background-color: $blue
+			border-color: $dark_base02
+		.checkbox .checkbox-inner input[type=checkbox]:checked+span
+			border-color: $blue
+		.checkbox .checkbox-inner span:after, .checkbox .checkbox-inner span
+			background-color: $dark_base02
 	.bda-slist
 		li
 			background-color: $light_base02
@@ -318,8 +352,11 @@ video, code, .image
 				&::before, &::after
 					background:  $light_base01
 	.guild-settings-modal
-		span
-			color: $light_base00 !important
+		.settings-inner
+			div:not(.guild-settings-modal-members)
+				.scroller-wrap
+					span
+						color: $light_base00 !important
 	.markdown-modal
 		color: $light_base00 !important
 		+border-radius(5px)
@@ -355,6 +392,13 @@ video, code, .image
 						color: $light_base02 !important
 						background-color: $red
 						border-color: $orange
+			input, .member-role-add button, .member-role
+				color: $light_base00
+				background-color: $light_base02
+				border-color: $light_base01
+			.member-role-add
+				@extend input
+				border-color: $light_base01
 		.markdown-modal-header
 			color: $light_base01
 			border-bottom-color: $light_base00
@@ -472,14 +516,56 @@ video, code, .image
 			color: $light_base01
 			border-color: transparent
 			&:hover
-				border-bottom-color: $light_base1
+				border-bottom-color: $light_base01 !important
 	.form-inner, .form-header, .scroller
 		background-color: $light_base03
 		input
 			background-color: $light_base02
 			color: $light_base00 !important
 @each $theme, $X_base03, $X_base02, $X_base01, $X_base00, $X_base0, $X_base1, $X_base2, $X_base3, $Y_base03, $Y_base02, $Y_base01, $Y_base00, $Y_base0, $Y_base1, $Y_base2, $Y_base3 in $themes
+	.app.flex-vertical.theme-#{$theme}
+		& + div
+			background-color: $X_base02 !important
+			button
+				color: $X_base02 !important
+				border-radius: 2px
+			#bd-customcss-attach-controls
+				background-color: $X_base02
+				border: 0px !important
+				border-color: $X_base02 !important
+				span
+					color: $X_base00 !important
+				.checkbox .disabled
+					span
+						color: $X_base1 !important
+				.checkbox
+					border-color: $blue
+					span
+						color: $X_base00 !important
+				.checkbox .checkbox-inner input[type=checkbox]+span
+					border-color: $X_base01
+				.checkbox .checkbox-inner input[type=checkbox]:checked+span:after, .checkbox .checkbox-inner input[type=checkbox]:checked+span
+					background-color: $blue
+					border-color: $X_base02
+				.checkbox .checkbox-inner input[type=checkbox]:checked+span
+					border-color: $blue
+				.checkbox .checkbox-inner span:after, .checkbox .checkbox-inner span
+					background-color: $X_base02
+			.CodeMirror
+				color: $X_base00
+				background-color: $X_base03 !important
+				.linenumber, .CodeMirror-gutters
+					color: $X_base00 !important
+					background-color: $X_base02
+					border-right-color: $X_base01
+				.cm-comment
+					color: $X_base01 !important
 	.theme-#{$theme}
+		.bot-tag, .btn
+			color: $X_base02 !important
+		.aka
+			color: $X_base02 !important
+			background-color: $X_base00 !important
 		.scroller-wrap.scroller
 			::-webkit-scrollbar-thumb
 				background-color: $X_base03
@@ -550,43 +636,43 @@ video, code, .image
 			.selected
 				color: $blue !important
 				border-bottom-color: $blue !important
-				.user-popout
+		.user-popout
+			@extend body
+			.header
+				.username, .nickname, strong
+					color: $X_base3
+				.bot-tag-invert
 					@extend body
-					.header
-						.username, .nickname, strong
-							color: $X_base3
-						.bot-tag-invert
-							@extend body
-							background-color: $Y_base02 !important
-							color: $blue !important
-						.discriminator
-							color: $X_base2 !important
-						.activity
-							color: $X_base01 !important
-						background: rgba( $X_base02, .7 )
-						//-webkit-filter: hue-rotate(270deg)
-						.avatar-popout
-							//-webkit-filter: hue-rotate(30deg)
-							border: none
-					.body, .footer
-						background-color: $Y_base03
-						color: $Y_base00 !important
-						textarea
-							color: $Y_base00
-							&:focus
-								background-color: $Y_base02
-								color: $Y_base2 !important
-						input, .member-role-add button
-							color: $Y_base00
-							background-color: $Y_base02
-							border-color: $Y_base01
-						.member-role-add
-							@extend input
-							border-color: $Y_base01
-						.icon
-							color: $Y_base02 !important
-						.footer
-							border-top-color: $Y_base01
+					background-color: $Y_base02 !important
+					color: $blue !important
+				.discriminator
+					color: $X_base2 !important
+				.activity
+					color: $X_base01 !important
+				background: rgba( $X_base02, .7 )
+				//-webkit-filter: hue-rotate(270deg)
+				.avatar-popout
+					//-webkit-filter: hue-rotate(30deg)
+					border: none
+			.body, .footer
+				background-color: $Y_base03
+				color: $Y_base00 !important
+				textarea
+					color: $Y_base00
+					&:focus
+						background-color: $Y_base02
+						color: $Y_base2 !important
+				input, .member-role-add button, .member-role
+					color: $Y_base00
+					background-color: $Y_base02
+					border-color: $Y_base01
+				.member-role-add
+					@extend input
+					border-color: $Y_base01
+				.icon
+					color: $Y_base02 !important
+				.footer
+					border-top-color: $Y_base01
 		.guild-header ul.treatment-1
 			li:hover
 				background-color: $Y_base02 !important
@@ -612,15 +698,16 @@ video, code, .image
 			border-bottom-color: $X_base02 !important
 			@extend .flex-spacer
 			.title
-				color: $X_base00 !important
+				color: $X_base01 !important
+				font-size: 18px
 			.channel-name
 				color: $X_base01 !important
 				&::before
-					color: $X_base01 !important
-			.topic .topic-expandable
-				color: $X_base01 !important
+					color: $X_base00 !important
+			.topic
+				color: $X_base00 !important
 				&::before
-					color: $X_base01 !important
+					color: $X_base00 !important
 		.channel-members
 			.member:hover, .member:focus, .member.popout-open
 				background: linear-gradient(to right, $X_base01 85%, $X_base02)
@@ -643,6 +730,10 @@ video, code, .image
 				> div
 					//background: $X_base01
 			.divider-red
+				& + div:not(.message-group)
+					span
+						background-color: transparent
+						color: transparent !important
 				> span
 					//+border-radius($edge-radius)
 					color: $red !important
@@ -660,15 +751,19 @@ video, code, .image
 				background-color: $X_base02
 				.member-activity
 					color: $X_base00 !important
-		.message-group .comment .markup
-			color: $X_base00 !important
+		.message-group .comment
+			.markup
+				color: $X_base00 !important
+			.replyer
+				color: $X_base01 !important
+				background-color: $X_base02 !important
 		.embed-description
 			color: $X_base01 !important
 		.messages-wrapper .scroller-wrap,
-		.friends-table .scroller-wrap, .messages-popout-wrap .scroller-wrap
+		.friends-table .scroller-wrap, .messages-popout-wrap .scroller-wrap, .channel-members-wrap .scroller-wrap
 			::-webkit-scrollbar-thumb
 				background-color: $X_base03
 				border: 0px
 			::-webkit-scrollbar-track-piece
 				background-color: $X_base02
-				border-color: $X_base03
+				border-color: transparent
