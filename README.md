@@ -2,7 +2,7 @@
 Discord theme based on https://github.com/altercation/solarized
 
 ## Install
-You have to options to use this theme:
+You have two options to use this theme:
 
 **1.**  Use **BetterDiscord** and put the [.theme.css file](https://raw.githubusercontent.com/ZerataX/discord-solarized-theme/master/solarizeds.theme.css) in the `/BetterDiscord/themes/` folder or use [evenBetterRepo](https://github.com/IRDeNial/BD-Even-Better-Repo)
 
